@@ -5,7 +5,18 @@ module.exports = {
   },
   purge: [],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        primary: '#0A192F',
+        'light-primary': '#172a45',
+        white: '#E6F1FF',
+        'dark-white': '#A8B2D1',
+        accent: '#64FFDA'
+      },
+      margin: {
+        '14': '3.2rem'
+      }
+    },
   },
   variants: {},
   plugins: [],

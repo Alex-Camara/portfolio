@@ -3,3 +3,22 @@
 @tailwind components;
 
 @tailwind utilities;
+
+.navbar-button-circle {
+    @apply bg-accent w-1 h-1 rounded-full mx-2;
+}
+
+.navbar-button {
+    @apply text-dark-white cursor-pointer pr-10;
+}
+
+.navbar-menu-button {
+    @apply text-dark-white cursor-pointer;
+}
+
+/*pr-10 py-10*/
+.regular-button {
+    @apply text-accent bg-transparent rounded-lg border-accent py-2 px-4 border-2;
+}
+
+@import './hamburguer.css'
