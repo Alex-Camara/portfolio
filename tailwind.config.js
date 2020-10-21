@@ -11,7 +11,16 @@ module.exports = {
         'light-primary': '#172a45',
         white: '#E6F1FF',
         'dark-white': '#A8B2D1',
-        accent: '#64FFDA'
+        accent: '#64FFDA',
+        'red-accent': '#FF1744',
+      },
+      fontFamily: {
+        body: ['Nunito'],
+        mont: ['Montserrat'],
+        didact: ['Didact Gotic'],
+      },
+      fontSize: {
+        huge: '6rem'
       },
       margin: {
         '14': '3.2rem'

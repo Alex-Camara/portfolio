@@ -1,6 +1,6 @@
 <template>
   <div class="navbar z-20">
-    <nav class="flex fixed w-full justify-end bg-primary h-24">
+    <nav class="flex fixed w-full justify-end h-24">
 
         <button id="hamburguer-button" class="hamburger--elastic flex mr-6 h-12 items-center self-center md:hidden z-50" type="button" 
             @click="changeShowMenu"
@@ -61,8 +61,7 @@ export default class Navbar extends Vue {
     private changeShowMenu() {
         this.showMenu = !(this.showMenu);
         this.isActive = !this.isActive;
-        // $event.target.classList.toggle('is-active')
-        // console.log($event)
+        // this.$emit("isActive", this.isActive);
     }
 }
 </script>

@@ -1,8 +1,11 @@
 <template>
   <div class="Home">
     <navbar/>
-    <contact/>
-    <!-- <hello class="pt-24"/> -->
+    <div class="flex">
+      <contact/>
+      <hello id="main" class="pt-24 md:pt-48"/>
+    </div>
+    
   </div>
 </template>
 
@@ -19,6 +22,18 @@ import Contact from '@/components/Contact.vue';
   },
 })
 export default class Home extends Vue {
+  // private isNavbarActive = false;
 
+  // blurContent(isActive :boolean){
+  //   console.log(isActive)
+  //   this.isNavbarActive = isActive;
+  //   let element = document.getElementById("main");
+  //   if (isActive){
+  //     element!.classList.add("blur-screen");
+  //   } else {
+  //     element!.classList.remove("blur-screen");
+  //   }
+  //   console.log(element)
+  // }
 }
 </script>
