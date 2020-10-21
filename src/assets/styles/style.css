@@ -21,4 +21,8 @@
     @apply text-accent bg-transparent rounded-lg border-accent py-2 px-4 border-2;
 }
 
+.white-icon {
+    filter: invert(85%) sepia(13%) saturate(721%) hue-rotate(194deg) brightness(108%) contrast(101%);
+}
+
 @import './hamburguer.css'

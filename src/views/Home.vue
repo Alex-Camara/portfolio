@@ -1,7 +1,8 @@
 <template>
   <div class="Home">
     <navbar/>
-    <!-- <hello/> -->
+    <contact/>
+    <!-- <hello class="pt-24"/> -->
   </div>
 </template>
 
@@ -9,10 +10,12 @@
 import { Component, Vue } from 'vue-property-decorator';
 import Navbar from '@/components/Navbar.vue';
 import Hello from '@/components/Hello.vue';
+import Contact from '@/components/Contact.vue';
 @Component({
   components: {
-    navbar: Navbar,
+    Navbar,
     Hello,
+    Contact,
   },
 })
 export default class Home extends Vue {

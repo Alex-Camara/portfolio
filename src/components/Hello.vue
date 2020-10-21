@@ -1,15 +1,17 @@
 <template>
   <div class="Hello bg-primary">
-      hola
+      <div>
+        <p class="text-4xl text-white">HOLA</p>
+      </div>
   </div>
 </template>
 
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import Navbar from '@/components/Navbar.vue';
+
 @Component
 export default class Hello extends Vue {
-
+  private name = 'Alejandro Cámara';
 }
 </script>
