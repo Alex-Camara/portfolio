@@ -25,6 +25,9 @@ module.exports = {
       margin: {
         '14': '3.2rem'
       },
+      spacing: {
+        img: '295px',
+      },
       fill: {
         current: '#A8B2D1',
       }

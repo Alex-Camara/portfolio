@@ -1,5 +1,5 @@
 <template>
-  <div class="Hello flex justify-center sm:content-start w-full h-full md:pb-20 md:mr-40 ">
+  <div class="flex sm:content-start">
       <div class="flex flex-col justify-center">
         <p class="text-base text-accent">{{ greetings }}</p>
         <p class="text-4xl text-white mb-2 md:mb-5 font-bold md:text-huge">{{ name }}</p>

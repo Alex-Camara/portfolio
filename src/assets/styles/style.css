@@ -48,4 +48,22 @@
     backdrop-filter: blur(6px);
 }
 
+@layer utilities {
+    @responsive {
+        .accent-filter {
+            transition: 0.5s;
+            filter: invert(0%) sepia(97%) saturate(250%) hue-rotate(100deg) brightness(106%) contrast(104%);
+            opacity: 0.50;
+            backdrop-filter: blur(6px);
+        }
+    }
+
+    @variants hover {
+        .no-filter {
+            filter: none;
+            opacity: 1;
+        }
+    }
+}
+
 @import './hamburguer.css'

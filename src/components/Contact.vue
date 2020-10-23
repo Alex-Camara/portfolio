@@ -1,5 +1,5 @@
 <template>
-  <div class="flex justify-center top-0 left-0 h-screen w-1/12 sticky z-30">
+  <div class="invisible md:visible flex justify-center top-0 left-0 h-screen w-24 fixed z-30 bg-primary">
     <div class="flex flex-col pt-64">
         <img src="../assets/github.svg" class="white-icon h-4 my-4 cursor-pointer animate-bounce"/>
         <img src="../assets/telegram.svg" class="white-icon h-4 my-4 cursor-pointer animate-bounce"/>
