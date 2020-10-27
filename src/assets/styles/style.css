@@ -7,45 +7,24 @@
 @tailwind components;
 @tailwind utilities;
 
-.navbar-button-circle {
-    @apply bg-accent w-1 h-1 rounded-full mx-2;
-}
-
-.navbar-button {
-    @apply text-dark-white cursor-pointer pr-10;
-}
-
-.navbar-button:hover {
-    @apply text-accent cursor-pointer pr-10;
-}
-
-.navbar-menu-button {
-    @apply text-dark-white cursor-pointer;
-}
-
-/*pr-10 py-10*/
-.regular-button {
-    @apply text-accent bg-transparent rounded-lg border-accent py-2 px-4 border-2 transition ease-in-out duration-300;
-}
-
-.regular-button:hover {
-    @apply text-white bg-teal-300 bg-opacity-25 rounded-lg border-accent py-2 px-4 border-2 transition ease-in-out duration-300;
-}
-
-/* .regular-button:active {
-    @apply text-white animate-pulse bg-red-accent bg-opacity-25 rounded-lg border-red-accent py-2 px-4 border-2;
-} */
-
-.regular-button:focus {
-    outline: none;
-}
-
 .white-icon {
     filter: invert(85%) sepia(13%) saturate(721%) hue-rotate(194deg) brightness(108%) contrast(101%);
 }
 
+.blue-icon {
+    filter: invert(88%) sepia(10%) saturate(2123%) hue-rotate(97deg) brightness(105%) contrast(104%);
+}
+
 .blur-screen {
     backdrop-filter: blur(6px);
+}
+
+.link-text {
+    @apply text-accent cursor-pointer;
+}
+
+.link-text:hover {
+    @apply underline;
 }
 
 @layer utilities {
@@ -66,4 +45,5 @@
     }
 }
 
-@import './hamburguer.css'
+@import './buttons.scss';
+@import './hamburguer.css';

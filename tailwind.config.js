@@ -13,6 +13,7 @@ module.exports = {
         'dark-white': '#A8B2D1',
         accent: '#64FFDA',
         'red-accent': '#FF1744',
+        'dark-gray': '#8892b0',
       },
       fontFamily: {
         body: ['Nunito'],
