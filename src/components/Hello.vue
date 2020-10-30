@@ -3,7 +3,7 @@
       <div class="flex flex-col justify-center">
         <p class="text-base text-accent">{{ greetings }}</p>
         <p class="text-4xl text-white mb-2 md:mb-5 font-bold md:text-huge">{{ name }}</p>
-        <p class="text-base text-dark-white">{{ introduction }} </p>
+        <p class="text-base text-dark-white">{{ introduction }}  </p>
 
         <button class="regular-button items-center mt-20 place-self-start w-56">{{ contactButton }}</button>
       </div>
