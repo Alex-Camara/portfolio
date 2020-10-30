@@ -8,7 +8,8 @@ export class Workplace {
     private endDate: string;
     private achievements: string[] = [];
 
-    constructor(id: number, job: string, name: string, acronym: string, startDate: string, endDate: string, link: string) {
+    constructor(id: number, job: string, name: string, acronym: string,
+                startDate: string, endDate: string, link: string) {
         this.id = id;
         this.name = name;
         this.job = job;

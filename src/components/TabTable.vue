@@ -83,20 +83,21 @@ export default class TabTable extends Vue {
     }
 
     private setSelectedWorkplace(index: number, workplace: Workplace) {
-            const tabInformationElement = document.getElementById("tab-information");
-            
-            const elements = document.getElementsByClassName('tab-button');
-            const selectedButton = this.$refs['tab-button-' + index];
+            const tabInformationElement: any = document.getElementById('tab-information');
+            const elements = Array.from(document.getElementsByClassName('tab-button'));
+            const selectedDivButton: any = this.$refs['tab-button-' + index];
             elements.forEach(((element: any) => {
                 element.classList.remove('tab-button-selected');
             }));
 
             tabInformationElement.classList.add('fade-in');
-            tabInformationElement.addEventListener('animationend', function(e) {
+            tabInformationElement.addEventListener('animationend', (e: any) => {
                 tabInformationElement.classList.remove('fade-in');
-            })
+            });
 
-            selectedButton[0].children[0].classList.add('tab-button-selected'),
+            const selectedDivChildren = selectedDivButton[0].children[0];
+
+            selectedDivButton[0].children[0].classList.add('tab-button-selected'),
             this.$data.selectedWorkplace = workplace;
     }
 }
