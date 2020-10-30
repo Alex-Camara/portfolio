@@ -1,19 +1,19 @@
 <template>
-    <div class="flex justify-items-start">
-        <div class="flex flex-col">
-            <div v-for="workplace in workplaces" :key="workplace.id">
-                <button class="tab-button" @click="setSelectedWorkplace(workplace)">
+    <div class="flex flex-col lg:flex-row justify-items-start">
+        <div class="flex absolute left-0 w-screen overflow-auto lg:relative lg:overflow-visible lg:flex-col lg:w-auto">
+            <div v-for="(workplace, index) in workplaces" :key="workplace.id" :ref="'tab-button-' + index">
+                <button id="tab-button" class="tab-button" @click="setSelectedWorkplace(index, workplace)">
                     {{ workplace.acronym }}
                 </button>
             </div>
         </div>
 
-        <div class="text-dark-white pl-10" v-if="selectedWorkplace">
+        <div id="tab-information" class="mt-20 lg:mt-0 text-dark-white lg:pl-10">
             <div class="flex text-base font-bold flex-wrap">
                 <p class="">{{ selectedWorkplace.job }} at &shy;</p>
                 <a class="link-text" :href="selectedWorkplace.link" target="_blank">{{ selectedWorkplace.name }}</a>
             </div>
-            <div class="flex text-base">
+            <div class="flex text-base flex-wrap">
                 <p>{{ selectedWorkplace.startDate }} - &shy;</p>
                 <p>{{ selectedWorkplace.endDate }}</p>
             </div>
@@ -35,10 +35,10 @@ import { Workplace } from '../classes/Workplace';
 export default class TabTable extends Vue {
     private workplaces: Workplace[] = [];
 
-    data(){
+    private data() {
         return{
-            selectedWorkplace!: Workplace
-        }
+            selectedWorkplace: {},
+        };
     }
 
     private created() {
@@ -48,7 +48,6 @@ export default class TabTable extends Vue {
         const workplaceLania = new Workplace(4, 'Software Engineer Intern', 'Laboratorio Nacional de Informática Avanzada', 'LANIA', 'September 2018', 'December 2018', 'http://www.lania.mx/sitios/cel/');
 
         this.workplaces.push(workplaceISP, workplaceIIBUV, workplaceISP2, workplaceLania);
-        this.setSelectedWorkplace(this.workplaces[0]);
 
         workplaceISP.addAchievement('Implemented requirements engineering activities to develop an application intended to serve as '
         + 'a tool to collect data from medical centers by health sciences students, said data would allow competent authorities to analyze working conditions');
@@ -79,9 +78,26 @@ export default class TabTable extends Vue {
         workplaceLania.addAchievement('Automated the institution workers paid leave permits process to reduce paper and bureaucratic work.');
     }
 
-    private setSelectedWorkplace(workplace: Workplace){
-        this.selectedWorkplace = workplace;
-        console.info(this.selectedWorkplace)
+    private mounted() {
+        this.setSelectedWorkplace(0, this.workplaces[0]);
+    }
+
+    private setSelectedWorkplace(index: number, workplace: Workplace) {
+            const tabInformationElement = document.getElementById("tab-information");
+            
+            const elements = document.getElementsByClassName('tab-button');
+            const selectedButton = this.$refs['tab-button-' + index];
+            elements.forEach(((element: any) => {
+                element.classList.remove('tab-button-selected');
+            }));
+
+            tabInformationElement.classList.add('fade-in');
+            tabInformationElement.addEventListener('animationend', function(e) {
+                tabInformationElement.classList.remove('fade-in');
+            })
+
+            selectedButton[0].children[0].classList.add('tab-button-selected'),
+            this.$data.selectedWorkplace = workplace;
     }
 }
 </script>

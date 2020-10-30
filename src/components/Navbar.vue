@@ -1,5 +1,5 @@
 <template>
-  <div class="navbar z-20">
+  <div class="nav relative">
     <nav class="flex fixed w-screen justify-end h-24 bg-primary">
 
         <button id="hamburguer-button" class="hamburger--elastic flex mr-6 h-12 items-center self-center md:hidden z-50" type="button" 

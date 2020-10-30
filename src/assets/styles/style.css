@@ -7,6 +7,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.nav {
+    z-index: 9999;
+}
+
 .white-icon {
     filter: invert(85%) sepia(13%) saturate(721%) hue-rotate(194deg) brightness(108%) contrast(101%);
 }
@@ -33,7 +37,6 @@
             transition: 0.5s;
             filter: invert(0%) sepia(97%) saturate(250%) hue-rotate(100deg) brightness(106%) contrast(104%);
             opacity: 0.50;
-            backdrop-filter: blur(6px);
         }
     }
 
@@ -47,3 +50,4 @@
 
 @import './buttons.scss';
 @import './hamburguer.css';
+@import './animation.css';

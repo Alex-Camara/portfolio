@@ -18,6 +18,14 @@ export class Workplace {
         this.link = link;
     }
 
+    public getId() {
+        return this.id;
+    }
+
+    public getAcronym() {
+        return this.acronym;
+    }
+
     public addAchievement(achievement: string) {
         this.achievements.push(achievement);
     }

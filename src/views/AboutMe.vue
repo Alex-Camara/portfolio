@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col h-screen bg-primary">
+    <div class="flex flex-col h-full lg:h-screen bg-primary">
 
         <div class="flex flex-col lg:flex-row  mx-5 mt-5 lg:mx-40 lg:mt-20">
 
@@ -17,10 +17,9 @@
                 </div>
 
                 <div class="flex h-full items-center lg:w-4/12 m-10">
-                    <img src="../assets/me.jpg" class="border-accent border-4 lg:border-8 rounded-md max-w-x1 md:accent-filter hover:no-filter ease-in-out duration-100">
+                    <img src="../assets/me.jpg" class="border-accent border-4 lg:border-8 rounded-md max-w-x1 lg:accent-filter hover:no-filter ease-in-out duration-100">
                 </div>
         </div>
-
     </div>
 </template>
 

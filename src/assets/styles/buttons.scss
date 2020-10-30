@@ -27,10 +27,19 @@
 }
 
 .tab-button {
-    @apply text-dark-white bg-transparent w-40 text-left text-sm py-2 px-4 transition ease-in-out duration-300;
+    @apply text-dark-white bg-transparent w-40 text-center text-sm py-2 px-4 transition ease-in-out duration-300;
+}
+@screen lg {
+    .tab-button {
+        @apply text-left;
+    }
 }
 
 .tab-button:hover {
+    @apply text-accent bg-light-primary transition ease-in-out duration-300;
+}
+
+.tab-button-selected {
     @apply text-accent bg-light-primary transition ease-in-out duration-300;
 }
 
