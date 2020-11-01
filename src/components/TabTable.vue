@@ -42,7 +42,7 @@ export default class TabTable extends Vue {
     }
 
     private created() {
-        const workplaceISP = new Workplace(1, 'Software Engineer', 'Instituto de Salud Pública', 'ISP', 'November 2019', 'July 2020', 'https://www.uv.mx/isp/');
+        const workplaceISP = new Workplace(1, 'Software Engineer', 'Observatorio de Educación Médica y Derechos Humanos', 'OBEME', 'November 2019', 'July 2020', 'https://www.uv.mx/isp/');
         const workplaceIIBUV = new Workplace(2, 'Software Engineer', 'Instituto de Investigaciones Biológicas de la UV', 'IIBUV', 'February 2019', 'August 2020', 'https://www.uv.mx/iib/');
         const workplaceISP2 = new Workplace(3, 'Software Engineer Intern', 'Instituto de Salud Pública de la UV', 'ISP', 'February 2019', 'September 2019', 'https://www.uv.mx/isp/');
         const workplaceLania = new Workplace(4, 'Software Engineer Intern', 'Laboratorio Nacional de Informática Avanzada', 'LANIA', 'September 2018', 'December 2018', 'http://www.lania.mx/sitios/cel/');
@@ -86,19 +86,22 @@ export default class TabTable extends Vue {
             const tabInformationElement: any = document.getElementById('tab-information');
             const elements = Array.from(document.getElementsByClassName('tab-button'));
             const selectedDivButton: any = this.$refs['tab-button-' + index];
-            elements.forEach(((element: any) => {
-                element.classList.remove('tab-button-selected');
-            }));
 
-            tabInformationElement.classList.add('fade-in');
-            tabInformationElement.addEventListener('animationend', (e: any) => {
-                tabInformationElement.classList.remove('fade-in');
-            });
+            if (!selectedDivButton[0].children[0].classList.contains('tab-button-selected')) {
+                elements.forEach(((element: any) => {
+                    element.classList.remove('tab-button-selected');
+                }));
 
-            const selectedDivChildren = selectedDivButton[0].children[0];
+                tabInformationElement.classList.add('fade-in');
+                tabInformationElement.addEventListener('animationend', (e: any) => {
+                    tabInformationElement.classList.remove('fade-in');
+                });
 
-            selectedDivButton[0].children[0].classList.add('tab-button-selected'),
-            this.$data.selectedWorkplace = workplace;
+                const selectedDivChildren = selectedDivButton[0].children[0];
+
+                selectedDivButton[0].children[0].classList.add('tab-button-selected'),
+                this.$data.selectedWorkplace = workplace;
+            }
     }
 }
 </script>

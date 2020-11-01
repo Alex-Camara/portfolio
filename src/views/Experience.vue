@@ -1,12 +1,8 @@
 <template>
     <div class="flex flex-col h-screen items-center bg-primary">
-        <!-- <div class="flex w-7/12"> -->
-            <!-- <div class="border h-0 lg:w-5/6 my-auto ml-10 mr-4 border-dark-white"></div> -->
-            <!-- <div class="text-white text-xl font-bold lg:text-2xl">{{ title }}</div> -->
-        <!-- </div> -->
-        <div class="flex w-7/12">
-                        <div class="text-white text-xl w-8/12 lg:w-4/12 font-bold lg:text-2xl">{{ title }}</div>
-                        <div class="border h-0 w-full lg:w-5/6 my-auto mr-auto border-dark-white"></div>
+        <div class="flex w-5/6 lg:w-7/12">
+                        <div class="text-white text-xl w-5/12 lg:w-4/12 font-bold lg:text-2xl">{{ title }}</div>
+                        <div class="border h-0 w-7/12 lg:w-5/6 my-auto mr-auto border-dark-white"></div>
                     </div>
         <tab-table class="w-5/6 lg:w-7/12 mt-14"/>
     </div>
