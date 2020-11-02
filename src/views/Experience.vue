@@ -1,9 +1,8 @@
 <template>
     <div class="flex flex-col h-screen items-center bg-primary">
-        <div class="flex w-5/6 lg:w-7/12">
-                        <div class="text-white text-xl w-5/12 lg:w-4/12 font-bold lg:text-2xl">{{ title }}</div>
-                        <div class="border h-0 w-7/12 lg:w-5/6 my-auto mr-auto border-dark-white"></div>
-                    </div>
+        <div class="w-5/6 lg:w-7/12">
+          <section-title :title="title"/>
+        </div>
         <tab-table class="w-5/6 lg:w-7/12 mt-14"/>
     </div>
 </template>
@@ -11,9 +10,11 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 import TabTable from '@/components/TabTable.vue';
+import SectionTitle from '@/components/SectionTitle.vue';
 @Component({
   components: {
     TabTable,
+    SectionTitle,
   },
 })
 export default class Experience extends Vue {

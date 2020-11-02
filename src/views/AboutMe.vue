@@ -1,14 +1,11 @@
 <template>
     <div class="flex flex-col h-full lg:h-screen bg-primary">
 
-        <div class="flex flex-col lg:flex-row  mx-5 mt-5 lg:mx-40 lg:mt-20">
+        <div class="flex flex-col p-4 lg:flex-row  mx-5 mt-5 lg:mx-40 lg:mt-20">
 
                 <div class="flex flex-col lg:w-7/12">
-                    <div class="flex p-4">
-                        <div class="text-white text-xl w-8/12 lg:w-4/12 font-bold lg:text-2xl">{{ title }}</div>
-                        <div class="border h-0 w-full lg:w-5/6 my-auto mr-auto border-dark-white"></div>
-                    </div>
-                    <div class="text-base p-4 lg:text-lg text-dark-white">
+                    <section-title :title="title"/>
+                    <div class="text-base lg:text-lg text-dark-white">
                         <p class="mt-4 mb-8">{{ paragraph1 }}</p>
                         <p class="mb-8">{{ paragraph2 }}</p>
                         <p class="mb-8">{{ paragraph3 }}</p>
@@ -25,7 +22,12 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-@Component
+import SectionTitle from '@/components/SectionTitle.vue';
+@Component({
+  components: {
+    SectionTitle,
+  },
+})
 export default class AboutMe extends Vue {
     private title = 'About me';
     private paragraph1 = 'Hi! I\'m Alejandro, a mexican software engineer.';
