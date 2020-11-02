@@ -5,7 +5,7 @@
         </div>
 
         <div v-for="(project, index) in projects" :key="project.getId()">
-            <project-left v-if="index%2" :project="project" class="w-10/12 mx-auto m-20" />
+            <project-left v-if="!index%2" :project="project" class="w-10/12 mx-auto m-20" />
             <project-right v-else :project="project" class="w-10/12 mx-auto m-20" />
         </div>
     </div>
