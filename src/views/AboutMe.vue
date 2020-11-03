@@ -13,7 +13,7 @@
                     </div>
                 </div>
 
-                <div class="flex h-full items-center lg:w-4/12 ml-5">
+                <div class="flex h-full items-center m-5 lg:w-4/12 lg:ml-5">
                     <img src="../assets/me.jpg" class="rounded-md max-w-x1 lg:accent-filter hover:no-filter ease-in-out duration-300">
                 </div>
         </div>

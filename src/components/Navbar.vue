@@ -68,8 +68,10 @@ export default class Navbar extends Vue {
         var prevScrollpos = window.pageYOffset;
         window.onscroll = function() {
             var currentScrollPos = window.pageYOffset;
-            if (prevScrollpos < currentScrollPos) {
+            if (prevScrollpos > currentScrollPos) {
                 document.getElementById("navbar").style.top = "0";
+                document.getElementById("navbar").style.backgroundColor = "rgba(10, 25, 47, 0.8)";
+                
             } else {
                 document.getElementById("navbar").style.top = "-6rem";
             }
