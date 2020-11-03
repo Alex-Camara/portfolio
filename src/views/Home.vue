@@ -1,6 +1,6 @@
 <template>
-  <div class="flex justify-center md:justify-start h-screen bg-primary">
-    <hello class="md:mt-8 md:ml-24"/>
+  <div class="flex justify-center md:justify-start h-screen bg-primary bg-blue-500">
+    <hello class="md:mt-32 md:ml-24"/>
   </div>
 </template>
 

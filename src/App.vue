@@ -3,7 +3,7 @@
     <navbar/>
     <contact-panel/>
     <right-panel/>
-    <home class="md:mx-24"/>
+    <home class="mx-5 md:mx-24"/>
     <about-me class="md:mx-24"/>
     <experience class="md:mx-24"/>
     <my-projects class="md:mx-20"/>
