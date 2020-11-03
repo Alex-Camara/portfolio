@@ -1,6 +1,6 @@
 <template>
-    <div class="h-screen bg-primary">
-      <div class="flex flex-col items-center">
+    <div class="h-screen">
+      <div class="flex flex-col items-center lg:mt-20">
         <div class="w-5/6 lg:w-7/12">
           <section-title :title="title"/>
         </div>
