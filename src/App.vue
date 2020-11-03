@@ -3,7 +3,7 @@
     <navbar/>
     <contact-panel :me="me" class="hidden lg:flex top-0 left-0 h-screen w-24 lg:fixed z-30"/>
     <right-panel/>
-    <home class="mx-5 md:mx-24"/>
+    <home :me="me" class="mx-5 md:mx-24"/>
     <about-me class="md:mx-24"/>
     <experience class="md:mx-24"/>
     <my-projects class="md:mx-20"/>
