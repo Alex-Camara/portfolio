@@ -1,13 +1,13 @@
 <template>
   <div id="app" class="bg-primary">
     <navbar/>
-    <contact-panel :me="me"/>
+    <contact-panel :me="me" class="hidden lg:flex top-0 left-0 h-screen w-24 lg:fixed z-30"/>
     <right-panel/>
     <home class="mx-5 md:mx-24"/>
     <about-me class="md:mx-24"/>
     <experience class="md:mx-24"/>
     <my-projects class="md:mx-20"/>
-    <contact class="md:mx-24 mt-10 "/>
+    <contact :me="me" class="md:mx-24 mt-10 mb-10 lg:mb-0"/>
     <footer-info class="md:mx-24"/>
   </div>
 </template>

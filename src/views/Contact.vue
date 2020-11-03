@@ -17,18 +17,30 @@
             </div>
 
             <div class="lg:w-3/12 mx-8 lg:mx-auto mt-16 lg:mt-10">
-                <button class="regular-button w-full h-12">{{ buttonText }}</button>
+                <button class="regular-button w-full">{{ buttonText }}</button>
             </div>
-            
+
         </div>
+
+        <contact-panel :me="me" class="lg:hidden h-24 my-5"/>
+
     </div>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
+import { Component, Vue, Prop } from 'vue-property-decorator';
 import SectionTitle from '@/components/SectionTitle.vue';
-@Component
+import ContactPanel from '@/components/ContactPanel.vue';
+import { Me } from "@/classes/Me";
+@Component({
+  components: {
+    ContactPanel,
+  },
+})
 export default class Contact extends Vue {
+    @Prop()
+    public me!: Me;
+
     private title = 'Contact info';
     private subtitle = 'Get In Touch! ;)';
     private buttonText = 'Say Hi!';

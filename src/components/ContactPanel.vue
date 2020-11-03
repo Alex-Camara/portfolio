@@ -1,6 +1,5 @@
 <template>
-  <div class="hidden lg:visible lg:flex justify-center top-0 left-0 h-screen w-24 fixed z-30 bg-primary">
-    <div class="flex flex-col pt-64">
+    <div class="flex lg:flex-col lg:pt-64 justify-between w-7/12 lg:w-24 lg:justify-center mx-auto items-center">
         <a :href="me.getGithubLink()" target="_blank">
           <img src="../assets/github.svg" class="white-icon h-4 my-4 cursor-pointer animate-bounce" />
         </a>
@@ -16,7 +15,6 @@
         <a :href="me.getTwitterLink()" target="_blank">
         <img src="../assets/twitter.svg" class="white-icon h-4 my-4 cursor-pointer animate-bounce"/>
         </a>
-    </div>
   </div>
 </template>
 
