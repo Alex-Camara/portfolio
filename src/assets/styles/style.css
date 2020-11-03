@@ -7,8 +7,12 @@
 @tailwind components;
 @tailwind utilities;
 
-.nav {
+.nav-div {
     z-index: 9999;
+}
+
+.nav {
+    transition: top 0.3s;
 }
 
 @layer utilities {
