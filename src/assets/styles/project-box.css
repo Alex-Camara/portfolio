@@ -1,0 +1,10 @@
+.project-box:hover {
+    transform: translateY(-5%);
+    transition: all;
+    transition-duration: .3s;
+    @apply ease-in-out;
+}
+
+.project-box {
+    @apply transition duration-300 ease-in-out;
+}

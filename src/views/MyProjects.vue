@@ -11,6 +11,8 @@
             </div>
         </div>
 
+        <p class="text-white mx-auto font-bold my-10 text-xl">{{ subtitle }}</p>
+
         <div class="flex flex-col lg:flex-row lg:flex-wrap w-full justify-center">
             <project-box :project="project" v-for="project in notPinnedProjects" :key="project.getId()" class="lg:w-3/12"/>
         </div>
@@ -34,6 +36,7 @@ import { Project } from '../classes/Project';
 })
 export default class MyProjects extends Vue {
     private title = 'Projects I\'ve worked on';
+    private subtitle = 'Other projects';
     private projects: Project[] = [];
 
     public get notPinnedProjects() {

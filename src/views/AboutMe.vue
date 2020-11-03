@@ -14,7 +14,7 @@
                 </div>
 
                 <div class="flex h-full items-center lg:w-4/12 m-10">
-                    <img src="../assets/me.jpg" class="border-accent border-4 lg:border-8 rounded-md max-w-x1 lg:accent-filter hover:no-filter ease-in-out duration-100">
+                    <img src="../assets/me.jpg" class="border-accent border-4 lg:border-8 rounded-md max-w-x1 lg:accent-filter hover:no-filter ease-in-out duration-300">
                 </div>
         </div>
     </div>

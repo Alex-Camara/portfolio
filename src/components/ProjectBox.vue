@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col bg-light-primary p-5 m-3 items-center rounded-md">
+    <div class="flex flex-col bg-light-primary p-5 m-3 items-center rounded-md project-box">
 
         <div id="project-header" class="flex w-full justify-between">
             <img src="../assets/folder.svg" class="blue-icon h-10 self-center cursor-pointer mr-3"/>
