@@ -1,12 +1,13 @@
 <template>
   <div id="app" class="bg-primary">
     <navbar/>
-    <contact/>
-    <!-- <right-panel/> -->
+    <contact-panel/>
+    <right-panel/>
     <home class="md:mx-24"/>
     <about-me class="md:mx-24"/>
-    <experience class="md:mx-24"></experience>
-    <my-projects class="md:mx-24"/>
+    <experience class="md:mx-24"/>
+    <my-projects class="md:mx-20"/>
+    <contact class="md:mx-24 mt-10 "/>
   </div>
 </template>
 
@@ -16,19 +17,21 @@ import Navbar from '@/components/Navbar.vue';
 import Home from '@/views/Home.vue';
 import AboutMe from '@/views/AboutMe.vue';
 import Experience from '@/views/Experience.vue';
-import Contact from '@/components/Contact.vue';
+import ContactPanel from '@/components/ContactPanel.vue';
 import RightPanel from '@/components/RightPanel.vue';
 import MyProjects from '@/views/MyProjects.vue';
+import Contact from '@/views/Contact.vue'
 
 @Component({
   components: {
     Navbar,
     Home,
-    Contact,
+    ContactPanel,
     AboutMe,
     Experience,
     MyProjects,
     RightPanel,
+    Contact,
   },
 })
 export default class App extends Vue {}
