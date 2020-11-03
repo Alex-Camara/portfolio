@@ -8,6 +8,7 @@
     <experience class="md:mx-24"/>
     <my-projects class="md:mx-20"/>
     <contact class="md:mx-24 mt-10 "/>
+    <footer-info class="md:mx-24"/>
   </div>
 </template>
 
@@ -21,6 +22,7 @@ import ContactPanel from '@/components/ContactPanel.vue';
 import RightPanel from '@/components/RightPanel.vue';
 import MyProjects from '@/views/MyProjects.vue';
 import Contact from '@/views/Contact.vue'
+import FooterInfo from '@/views/FooterInfo.vue'
 
 @Component({
   components: {
@@ -32,6 +34,7 @@ import Contact from '@/views/Contact.vue'
     MyProjects,
     RightPanel,
     Contact,
+    FooterInfo,
   },
 })
 export default class App extends Vue {}

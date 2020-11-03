@@ -1,6 +1,6 @@
 <template>
   <div class="nav-div relative">
-    <nav id="navbar" class="nav flex fixed w-screen justify-end h-24 bg-primary">
+    <nav id="navbar" class="nav flex fixed w-screen justify-end h-24">
 
         <button id="hamburguer-button" class="hamburger--elastic flex mr-6 h-12 items-center self-center md:hidden z-50" type="button" 
             @click="changeShowMenu"
@@ -69,9 +69,7 @@ export default class Navbar extends Vue {
         window.onscroll = function() {
             var currentScrollPos = window.pageYOffset;
             if (prevScrollpos > currentScrollPos) {
-                document.getElementById("navbar").style.top = "0";
-                document.getElementById("navbar").style.backgroundColor = "rgba(10, 25, 47, 0.8)";
-                
+                document.getElementById("navbar").style.top = "0";                
             } else {
                 document.getElementById("navbar").style.top = "-6rem";
             }
