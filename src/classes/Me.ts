@@ -7,10 +7,11 @@ export class Me {
     private github: string;
     private linkedin: string;
     private telegram: string;
+    private instagram: string;
     private resume: string;
 
     constructor(id: number, name: string, alias: string, email: string, twitter: string, linkedin: string,
-                github: string, telegram: string) {
+                github: string, telegram: string, instagram: string) {
         this.id = id;
         this.name = name;
         this.alias = alias;
@@ -19,6 +20,7 @@ export class Me {
         this.linkedin = linkedin;
         this.github = github;
         this.telegram = telegram;
+        this.instagram = instagram;
     }
 
     getGithubLink() {
@@ -32,5 +34,8 @@ export class Me {
     }
     getTelegramLink() {
         return this.telegram;
+    }
+    getInstagramLink() {
+        return this.instagram;
     }
 }

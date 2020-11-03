@@ -10,6 +10,9 @@
         <a :href="me.getLinkedinLink()" target="_blank">
         <img src="../assets/linkedin.svg" class="white-icon h-4 my-4 cursor-pointer animate-bounce"/>
         </a>
+        <a :href="me.getInstagramLink()" target="_blank">
+        <img src="../assets/instagram.svg" class="white-icon h-4 my-4 cursor-pointer animate-bounce"/>
+        </a>
         <a :href="me.getTwitterLink()" target="_blank">
         <img src="../assets/twitter.svg" class="white-icon h-4 my-4 cursor-pointer animate-bounce"/>
         </a>

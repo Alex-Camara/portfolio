@@ -42,7 +42,8 @@ export default class App extends Vue {
   private me!: Me;
   private created() {
     this.me = new Me(1, 'Alejandro Cámara', 'Alex Cámara', 'arcamsoft@gmail.com', 'https://twitter.com/alexarcam',
-                     'https://www.linkedin.com/in/alex-camara/', 'https://github.com/Alex-Camara', 'https://telegram.me/alexcamara');
+                     'https://www.linkedin.com/in/alex-camara/', 'https://github.com/Alex-Camara',
+                      'https://telegram.me/alexcamara', 'https://www.instagram.com/alex_arcam/');
   }
 }
 </script>
