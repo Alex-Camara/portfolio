@@ -11,66 +11,6 @@
     z-index: 9999;
 }
 
-.white-icon {
-    transition: 0.5s;
-    filter: invert(85%) sepia(13%) saturate(721%) hue-rotate(194deg) brightness(108%) contrast(101%);
-}
-
-.white-icon:hover {
-    transition: 0.5s;
-    filter: invert(88%) sepia(10%) saturate(2123%) hue-rotate(97deg) brightness(105%) contrast(104%);
-}
-
-.blue-icon {
-    filter: invert(88%) sepia(10%) saturate(2123%) hue-rotate(97deg) brightness(105%) contrast(104%);
-}
-
-.blur-screen {
-    backdrop-filter: blur(6px);
-}
-
-.link-text {
-    @apply text-accent cursor-pointer;
-}
-
-.link-text:hover {
-    @apply underline;
-}
-
-.text-left-foreground {
-    margin-left: 0;
-}@screen lg {
-    .text-left-foreground {
-        margin-left: -20%;
-    }
-}
-
-.left-foreground {
-    margin-left: -100%;
-}
-@screen lg {
-    .left-foreground {
-        margin-left: 0;
-    }
-}
-
-.text-right-foreground {
-    margin-right: 0;
-}@screen lg {
-    .text-right-foreground {
-        margin-right: -20%;
-    }
-}
-
-.right-foreground {
-    margin-right: -100%;
-}
-@screen lg {
-    .right-foreground {
-        margin-right: 0;
-    }
-}
-
 @layer utilities {
     @responsive {
         .accent-filter {
@@ -96,3 +36,6 @@
 @import './buttons.scss';
 @import './hamburguer.css';
 @import './animation.css';
+@import './icon.css';
+@import './link.css';
+@import './pinned-project.css';

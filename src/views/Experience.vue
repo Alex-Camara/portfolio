@@ -1,9 +1,11 @@
 <template>
-    <div class="flex flex-col h-screen items-center bg-primary">
+    <div class="h-screen bg-primary">
+      <div class="flex flex-col items-center">
         <div class="w-5/6 lg:w-7/12">
           <section-title :title="title"/>
         </div>
         <tab-table class="w-5/6 lg:w-7/12 mt-14"/>
+      </div>
     </div>
 </template>
 

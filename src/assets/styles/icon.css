@@ -1,0 +1,13 @@
+.white-icon {
+    transition: 0.5s;
+    filter: invert(85%) sepia(13%) saturate(721%) hue-rotate(194deg) brightness(108%) contrast(101%);
+}
+
+.white-icon:hover {
+    transition: 0.5s;
+    filter: invert(88%) sepia(10%) saturate(2123%) hue-rotate(97deg) brightness(105%) contrast(104%);
+}
+
+.blue-icon {
+    filter: invert(88%) sepia(10%) saturate(2123%) hue-rotate(97deg) brightness(105%) contrast(104%);
+}

@@ -1,0 +1,7 @@
+.link-text {
+    @apply text-accent cursor-pointer;
+}
+
+.link-text:hover {
+    @apply underline;
+}

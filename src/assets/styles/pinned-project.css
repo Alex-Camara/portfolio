@@ -1,0 +1,35 @@
+@tailwind utilities;
+
+.text-left-foreground {
+    margin-left: 0;
+}@screen lg {
+    .text-left-foreground {
+        margin-left: -20%;
+    }
+}
+
+.left-foreground {
+    margin-left: -100%;
+}
+@screen lg {
+    .left-foreground {
+        margin-left: 0;
+    }
+}
+
+.text-right-foreground {
+    margin-right: 0;
+}@screen lg {
+    .text-right-foreground {
+        margin-right: -20%;
+    }
+}
+
+.right-foreground {
+    margin-right: -100%;
+}
+@screen lg {
+    .right-foreground {
+        margin-right: 0;
+    }
+}

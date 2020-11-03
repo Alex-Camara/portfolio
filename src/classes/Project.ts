@@ -2,6 +2,7 @@ export class Project {
     private id: number;
     private name: string;
     private type: string;
+    private pinned: boolean;
     private description: string;
     private githubLink: string;
     private webLink: string;
@@ -9,7 +10,7 @@ export class Project {
     private imageSamples: string[] = [];
 
     constructor(id: number, name: string, type: string, description: string, githubLink: string,
-                webLink: string, stack: string[], imageSamples: string[]) {
+                webLink: string, stack: string[], imageSamples: string[], pinned: boolean) {
         this.id = id;
         this.name = name;
         this.type = type;
@@ -18,6 +19,7 @@ export class Project {
         this.webLink = webLink;
         this.stack = stack;
         this.imageSamples = imageSamples;
+        this.pinned = pinned;
     }
 
     public getId() {
@@ -37,5 +39,8 @@ export class Project {
     }
     public getStack(): string[] {
         return this.stack;
+    }
+    public isPinned(){
+        return this.pinned;
     }
 }
