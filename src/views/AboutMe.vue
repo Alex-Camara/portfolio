@@ -30,7 +30,7 @@ import SectionTitle from '@/components/SectionTitle.vue';
 })
 export default class AboutMe extends Vue {
     private title = 'About me';
-    private paragraph1 = 'Hi! I\'m Alejandro, a mexican software engineer.';
+    private paragraph1 = 'Hi! I\'m Alex, a mexican software engineer.';
     private paragraph2 = 'I\'m advocated to create good quality software solutions. Eager to work as part of an awesome team to bring efficient solutions to complex problems.';
     private paragraph3 = 'I completed my bachelor of Software Engineering at Universidad Veracruzana, during the 2020 summer.';
     private paragraph4 = 'My hobbies include playing with my cat, watching my cat play, watching my cat sleep, taking pictures of my cat and so on…!';

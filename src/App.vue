@@ -2,7 +2,7 @@
   <div id="app" class="bg-primary">
     <navbar @scroll="scrollToSection($event)"/>
     <contact-panel :me="me" class="hidden lg:flex top-0 left-0 h-screen w-24 lg:fixed z-30"/>
-    <right-panel/>
+    <right-panel :me="me"/>
     <home :me="me" class="mx-5 md:mx-24"/>
     <about-me ref="compAboutMe" class="md:mx-24"/>
     <experience ref="compExperience" class="md:mx-24"/>
@@ -42,22 +42,11 @@ import { VueClass } from '@vue/test-utils';
 export default class App extends Vue {
   private me!: Me;
   private created() {
+    document.title = 'Alex Cámara';
+
     this.me = new Me(1, 'Alejandro Cámara', 'Alex Cámara', 'arcamsoft@gmail.com', 'https://twitter.com/alexarcam',
                      'https://www.linkedin.com/in/alex-camara/', 'https://github.com/Alex-Camara',
                       'https://telegram.me/alexcamara', 'https://www.instagram.com/alex_arcam/');
-
-    // const callback = function(entries) {
-      // entries.forEach(entry => {
-        // entry.target.classList.toggle("is-visible");
-      // });
-    // };
-// 
-    // const observer = new IntersectionObserver(callback);
-// 
-    // const targets = document.querySelectorAll(".show-on-scroll");
-    // targets.forEach(function(target) {
-      // observer.observe(target);
-    // });
   }
 
   public scrollToSection(section: string) {

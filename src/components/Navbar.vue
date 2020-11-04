@@ -2,6 +2,10 @@
   <div class="nav-div relative">
     <nav id="navbar" class="nav flex fixed w-screen justify-end h-24">
 
+        <div class="hidden lg:flex my-auto self-start mr-auto ml-8 " @click="location.reload()">
+            <img :src="`${publicPath}logo.svg`" class="h-10 cursor-pointer">
+        </div>
+
         <button id="hamburguer-button" class="hamburger--elastic flex mr-6 h-12 items-center self-center md:hidden z-50" type="button" 
             @click="changeShowMenu"
             :class="{'is-active': isActive}"
@@ -44,11 +48,9 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 
-import BlueButton from '@/components/BlueButton.vue';
 import Menu from '@/components/Menu.vue';
 @Component({
   components: {
-    BlueButton,
     'aside-menu': Menu,
   },
 })
@@ -62,7 +64,7 @@ export default class Navbar extends Vue {
     private showMenu = false;
     private isActive = false;
     private lastScrollPosition = window.pageYOffset;
-    private publicPath = process.env.publicPath;
+    private publicPath = process.env.BASE_URL;
 
     private changeShowMenu() {
         this.showMenu = !(this.showMenu);

@@ -13,8 +13,8 @@
 
         <p class="text-white mx-auto font-bold my-10 text-xl">{{ subtitle }}</p>
 
-        <div class="flex flex-col lg:flex-row lg:flex-wrap w-full justify-center">
-            <project-box :project="project" v-for="(project, index) in notPinnedProjects" :key="project.getId()" class="lg:w-3/12" data-aos="fade-up" data-aos-duration="2000" :data-aos-delay="(100*index) + 100" data-aos-once="true"/>
+        <div class="flex flex-col flex-wrap lg:flex-row lg:flex-wrap lg:w-full justify-center lg:px-24">
+            <project-box :project="project" v-for="(project, index) in notPinnedProjects" :key="project.getId()" class="lg:w-4/12" data-aos="fade-up" data-aos-duration="2000" :data-aos-delay="(100*index) + 100" data-aos-once="true"/>
         </div>
     </div>
 </template>

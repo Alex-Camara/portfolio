@@ -1,6 +1,6 @@
 <template>
   <div class="flex">
-    <div class="flex flex-col justify-center w-full mx-auto right-foreground lg:w-5/12 z-50">
+    <div class="flex flex-col justify-center w-full mx-auto right-foreground lg:w-5/12 z-50" data-aos="fade-right" data-aos-duration="2000" data-aos-once="true">
       <p class="text-accent text-lg text-left">Pinned project</p>
       <p class="text-white text-xl font-bold text-left">
         {{ project.getName() }}

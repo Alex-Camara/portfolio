@@ -38,6 +38,11 @@
     }
 }
 
+.vertical-text {
+	transform: rotate(90deg);
+	transform-origin: right top 0;
+}
+
 @import './buttons.scss';
 @import './hamburguer.css';
 @import './animation.css';
