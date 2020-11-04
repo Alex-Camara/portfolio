@@ -17,8 +17,16 @@
       </div>
 
       <div class="flex mr-auto pr-2 mt-5">
-        <img src="../assets/link.svg" class="white-icon h-5 self-center cursor-pointer mr-3"/>
-        <img src="../assets/github.svg" class="white-icon h-5 self-center cursor-pointer"/>
+        <div v-if="project.getWebLink() !== ''">
+          <a :href="project.getWebLink()" target="_blank">
+            <img src="../assets/link.svg" class="white-icon h-5 self-center cursor-pointer mr-3"/>
+          </a>
+        </div>
+        <div v-if="project.getGithubLink() !== ''">
+          <a :href="project.getGithubLink()" target="_blank">
+            <img src="../assets/github.svg" class="white-icon h-5 self-center cursor-pointer"/>
+          </a>
+        </div>
       </div>
 
     </div>
