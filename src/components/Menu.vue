@@ -16,8 +16,7 @@
             <div class="flex items-center p-4 md:hidden">
                 <p class="navbar-menu-button" @click="scrollToSection('contact')">{{ sectionContact }}</p>
             </div>
-            <!-- <button class="regular-button m-10 md:hidden items-center">{{ resumeButtonText }}</button> -->
-            <a href="./cv_alejandro_camara.pdf" class="regular-button m-10 md:hidden items-center" target="_blank">
+            <a href="./cv_alejandro_camara.pdf" class="regular-button m-10 md:hidden" target="_blank">
                 {{ resumeButtonText }}
             </a>
         </div>

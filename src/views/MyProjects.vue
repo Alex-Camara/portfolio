@@ -1,5 +1,5 @@
 <template>
-    <div ref="compProjects" class="flex flex-col h-auto items-center bg-primary mt-20 pt-20">
+    <div ref="compProjects" class="flex flex-col h-auto items-center mt-20 pt-20">
         <div class="w-10/12">
             <section-title :title="title" data-aos="fade-down" data-aos-duration="3000" data-aos-once="true"/>
         </div>

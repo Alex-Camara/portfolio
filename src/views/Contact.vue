@@ -1,5 +1,5 @@
 <template>
-    <div ref="compContact" class="flex flex-col h-screen">
+    <div ref="compContact" class="flex flex-col h-screen bg-primary">
         <div class="my-auto" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="200" data-aos-once="true">
 
             <div class="flex mx-auto w-full">

@@ -1,5 +1,5 @@
 <template>
-  <div class="hidden lg:visible lg:flex justify-center top-0 right-0 h-screen w-24 fixed z-30 bg-primary">
+  <div class="hidden lg:visible lg:flex justify-center top-0 right-0 h-screen w-24 fixed z-30">
     <p></p>
   </div>
 </template>
