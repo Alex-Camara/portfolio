@@ -40,6 +40,12 @@ export class Project {
     public getStack(): string[] {
         return this.stack;
     }
+    public getGithubLink(): string {
+        return this.githubLink;
+    }
+    public getWebLink(): string {
+        return this.webLink;
+    }
     public isPinned(){
         return this.pinned;
     }

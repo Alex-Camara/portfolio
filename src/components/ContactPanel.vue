@@ -5,16 +5,16 @@
           <img src="../assets/github.svg" class="white-icon h-4 my-4 cursor-pointer animate-bounce" />
         </a>
         <a :href="me.getTelegramLink()" target="_blank">
-        <img src="../assets/telegram.svg" class="white-icon h-4 my-4 cursor-pointer animate-bounce"/>
+          <img src="../assets/telegram.svg" class="white-icon h-4 my-4 cursor-pointer animate-bounce"/>
         </a>
         <a :href="me.getLinkedinLink()" target="_blank">
-        <img src="../assets/linkedin.svg" class="white-icon h-4 my-4 cursor-pointer animate-bounce"/>
+          <img src="../assets/linkedin.svg" class="white-icon h-4 my-4 cursor-pointer animate-bounce"/>
         </a>
         <a :href="me.getInstagramLink()" target="_blank">
-        <img src="../assets/instagram.svg" class="white-icon h-4 my-4 cursor-pointer animate-bounce"/>
+          <img src="../assets/instagram.svg" class="white-icon h-4 my-4 cursor-pointer animate-bounce"/>
         </a>
         <a :href="me.getTwitterLink()" target="_blank">
-        <img src="../assets/twitter.svg" class="white-icon h-4 my-4 cursor-pointer animate-bounce"/>
+          <img src="../assets/twitter.svg" class="white-icon h-4 my-4 cursor-pointer animate-bounce"/>
         </a>
   </div>
 </template>

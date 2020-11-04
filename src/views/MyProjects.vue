@@ -88,7 +88,7 @@ export default class MyProjects extends Vue {
         const tequilaIDEStack = ['Java', 'Node', 'Socket.io', 'JavaFX'];
 
         const tequilaIDEWebLink = '';
-        const tequilaIDEGithubLink = '';
+        const tequilaIDEGithubLink = 'https://github.com/TequilaCoders/TequilaIDE';
 
         const tequilaIDEProject = new Project(3, 'Tequila IDE', 'desktop', tequilaIDEDescription, tequilaIDEGithubLink,
                                     tequilaIDEWebLink, tequilaIDEStack, tequilaIDEImageSamples, false);
@@ -99,7 +99,7 @@ export default class MyProjects extends Vue {
         const roombaStack = ['Java', 'Python', 'MySQL', 'Ubuntu Server'];
 
         const roombaWebLink = '';
-        const roombaGithubLink = '';
+        const roombaGithubLink = 'https://github.com/Alex-Camara/AppMusica';
 
         const roombaProject = new Project(4, 'Roomba Music', 'desktop', roombaDescription, roombaGithubLink,
                                     roombaWebLink, roombaStack, roombaImageSamples, false);
@@ -109,7 +109,7 @@ export default class MyProjects extends Vue {
         const obemeBackendStack = ['Kotlin', 'Spring Boot', 'PostgreSQL', 'GCP'];
 
         const obemeBackendWebLink = '';
-        const obemeBackendGithubLink = '';
+        const obemeBackendGithubLink = 'https://github.com/TequilaCoders/OBEME-Server';
 
         const obemeBackendProject = new Project(5, 'ObemeVeme Backend', 'web', obemeBackendDescription, obemeBackendGithubLink,
                                     obemeBackendWebLink, obemeBackendStack, obemeBackendImageSamples, false);
@@ -119,7 +119,7 @@ export default class MyProjects extends Vue {
         const cincoEnUnoStack = ['Java', 'Socket.io', 'IA'];
 
         const cincoEnUnoWebLink = '';
-        const cincoEnUnoGithubLink = '';
+        const cincoEnUnoGithubLink = 'https://github.com/AlanCrux/5EnLinea';
 
         const cincoEnLineaProject = new Project(6, 'Cinco en Línea', 'web', cincoEnUnoDescription, cincoEnUnoGithubLink,
                                     cincoEnUnoWebLink, cincoEnUnoStack, cincoEnUnoImageSamples, false);
