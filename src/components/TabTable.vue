@@ -1,6 +1,6 @@
 <template>
-    <div class="flex flex-col lg:flex-row mx-auto lg:justify-items-start">
-        <div class="flex absolute left-0 w-full overflow-auto lg:relative lg:overflow-visible lg:flex-col lg:w-auto">
+    <div class="flex flex-col lg:flex-row justify-items-start">
+        <div class="flex absolute left-0 w-screen overflow-auto lg:relative lg:overflow-visible lg:flex-col lg:w-auto">
             <div v-for="(workplace, index) in workplaces" :key="workplace.id" :ref="'tab-button-' + index">
                 <button id="tab-button" class="tab-button" @click="setSelectedWorkplace(index, workplace)">
                     {{ workplace.acronym }}
