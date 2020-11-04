@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col h-screen">
+    <div ref="compContact" class="flex flex-col h-screen">
         <div class="my-auto">
 
             <div class="flex mx-auto w-full">
@@ -17,7 +17,7 @@
             </div>
 
             <div class="lg:w-3/12 mx-8 lg:mx-auto mt-16 lg:mt-10">
-                <button class="regular-button w-full">{{ buttonText }}</button>
+                <button  @click="openEmail()" class="regular-button w-full">{{ buttonText }}</button>
             </div>
 
         </div>
@@ -47,5 +47,18 @@ export default class Contact extends Vue {
     private message = 'I\'m currently open to new job opportunities, so if you\'re interested '
                     +   'I\'d love to hear back from you. If you want to make a request, suggest '
                     +   'an improvement, report an error or you simply want to say hi, my inbox is always open!';
+
+    public scrollToTop() {
+        var rootElement = this.$refs.compContact as HTMLDivElement;
+        var offsets = rootElement.getBoundingClientRect();
+        var top = offsets.top;
+        window.scrollBy({
+            top: top,
+            behavior: 'smooth'});
+    }
+
+    public openEmail(): void {
+      location.href = 'mailto:' + this.me.getEmail() + '?subject=Hello!&body=Hi,%20Alex!';
+    }
 }
 </script>

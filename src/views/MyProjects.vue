@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col h-auto items-center bg-primary mt-10">
+    <div ref="compProjects" class="flex flex-col h-auto items-center bg-primary pt-20">
         <div class="w-10/12">
             <section-title :title="title" class=""/>
         </div>
@@ -38,6 +38,15 @@ export default class MyProjects extends Vue {
     private title = 'Projects I\'ve worked on';
     private subtitle = 'Other projects';
     private projects: Project[] = [];
+
+    public scrollToTop() {
+        var rootElement = this.$refs.compProjects as HTMLDivElement;
+        var offsets = rootElement.getBoundingClientRect();
+        var top = offsets.top;
+        window.scrollBy({
+            top: top,
+            behavior: 'smooth'});
+    }
 
     public get notPinnedProjects() {
         let notPinnedProjects = [];

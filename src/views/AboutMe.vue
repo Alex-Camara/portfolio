@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col h-full lg:h-screen bg-primary">
+    <div ref="compAboutMe" class="flex flex-col h-full lg:h-screen bg-primary">
 
         <div class="flex flex-col p-4 lg:flex-row  mx-5 mt-5 lg:mx-40 lg:mt-20 my-auto">
 
@@ -21,7 +21,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
+import { Component, Vue, Ref } from 'vue-property-decorator';
 import SectionTitle from '@/components/SectionTitle.vue';
 @Component({
   components: {
@@ -34,5 +34,14 @@ export default class AboutMe extends Vue {
     private paragraph2 = 'I\'m advocated to create good quality software solutions. Eager to work as part of an awesome team to bring efficient solutions to complex problems.';
     private paragraph3 = 'I completed my bachelor of Software Engineering at Universidad Veracruzana, during the 2020 summer.';
     private paragraph4 = 'My hobbies include playing with my cat, watching my cat play, watching my cat sleep, taking pictures of my cat and so on…!';
+    
+    public scrollToTop() {
+        var rootElement = this.$refs.compAboutMe as HTMLDivElement;
+        var offsets = rootElement.getBoundingClientRect();
+        var top = offsets.top;
+        window.scrollBy({
+            top: top,
+            behavior: 'smooth'});
+    }
 }
 </script>

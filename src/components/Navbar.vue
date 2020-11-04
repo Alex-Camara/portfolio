@@ -17,19 +17,19 @@
         <div class="flex">
             <div class="hidden md:flex items-center md:visible">
                 <div class="navbar-button-circle"></div>
-                <p class="navbar-button">{{ sectionAboutMe }}</p>
+                <p class="navbar-button" @click="scrollToSection('aboutMe')">{{ sectionAboutMe }}</p>
             </div>
             <div class="hidden md:flex items-center md:visible">
                 <div class="navbar-button-circle"></div>
-                <p class="navbar-button">{{ sectionExperience }}</p>
+                <p class="navbar-button" @click="scrollToSection('experience')">{{ sectionExperience }}</p>
             </div>
             <div class="hidden md:flex items-center md:visible">
                 <div class="navbar-button-circle"></div>
-                <p class="navbar-button">{{ sectionWork }}</p>
+                <p class="navbar-button" @click="scrollToSection('projects')">{{ sectionWork }}</p>
                 </div>
             <div class="hidden md:flex items-center md:visible">
                 <div class="navbar-button-circle"></div>
-                <p class="navbar-button">{{ sectionContact }}</p>
+                <p class="navbar-button" @click="scrollToSection('contact')">{{ sectionContact }}</p>
             </div> 
         </div>
         <blue-button class="hidden md:flex pr-10 items-center md:visible" :buttonText="resumeButtonText" />
@@ -61,7 +61,10 @@ export default class Navbar extends Vue {
     private changeShowMenu() {
         this.showMenu = !(this.showMenu);
         this.isActive = !this.isActive;
-        // this.$emit("isActive", this.isActive);
+    }
+
+    public scrollToSection(section: string) {
+        this.$emit('scroll', section);
     }
 
     private created() {
