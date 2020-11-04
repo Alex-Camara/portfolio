@@ -33,7 +33,9 @@
             </div> 
         </div>
         <div class="hidden md:flex md:visible items-center" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="900">
-            <blue-button class="pr-10 " :buttonText="resumeButtonText" />
+            <a href="./cv_alejandro_camara.pdf" class="regular-button mr-10" target="_blank">
+                {{ resumeButtonText }}
+            </a>
         </div>
     </nav>
   </div>
@@ -60,6 +62,7 @@ export default class Navbar extends Vue {
     private showMenu = false;
     private isActive = false;
     private lastScrollPosition = window.pageYOffset;
+    private publicPath = process.env.publicPath;
 
     private changeShowMenu() {
         this.showMenu = !(this.showMenu);
