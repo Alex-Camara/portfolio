@@ -5,16 +5,16 @@
         <div class="flex items-center flex-col justify-content-center">
 
             <div class="flex items-center p-4 md:hidden">
-                <p class="navbar-menu-button">{{ sectionAboutMe }}</p>
+                <p class="navbar-menu-button" @click="scrollToSection('aboutMe')">{{ sectionAboutMe }}</p>
             </div>
             <div class="flex items-center p-4 md:hidden">
-                <p class="navbar-menu-button">{{ sectionExperience }}</p>
+                <p class="navbar-menu-button" @click="scrollToSection('experience')">{{ sectionExperience }}</p>
             </div>
             <div class="flex items-center p-4 md:hidden">
-                <p class="navbar-menu-button">{{ sectionWork }}</p>
+                <p class="navbar-menu-button" @click="scrollToSection('projects')">{{ sectionWork }}</p>
             </div>
             <div class="flex items-center p-4 md:hidden">
-                <p class="navbar-menu-button">{{ sectionContact }}</p>
+                <p class="navbar-menu-button" @click="scrollToSection('contact')">{{ sectionContact }}</p>
             </div>
             <button class="regular-button m-10 md:hidden items-center">{{ resumeButtonText }}</button>
         </div>
@@ -41,6 +41,10 @@ export default class Menu extends Vue {
         } else {
             document.body.style.removeProperty('overflow');
         }
-  }
+    }
+
+    public scrollToSection(section: string) {
+        this.$emit('scroll', section);
+    }
 }
 </script>

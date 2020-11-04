@@ -1,7 +1,7 @@
 <template>
-    <div ref="compProjects" class="flex flex-col h-auto items-center bg-primary pt-20">
+    <div ref="compProjects" class="flex flex-col h-auto items-center bg-primary mt-20 pt-20">
         <div class="w-10/12">
-            <section-title :title="title" class=""/>
+            <section-title :title="title" data-aos="fade-down" data-aos-duration="3000"/>
         </div>
 
         <div v-for="(project, index) in projects" :key="project.getId()">

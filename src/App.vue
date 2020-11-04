@@ -45,6 +45,19 @@ export default class App extends Vue {
     this.me = new Me(1, 'Alejandro Cámara', 'Alex Cámara', 'arcamsoft@gmail.com', 'https://twitter.com/alexarcam',
                      'https://www.linkedin.com/in/alex-camara/', 'https://github.com/Alex-Camara',
                       'https://telegram.me/alexcamara', 'https://www.instagram.com/alex_arcam/');
+
+    // const callback = function(entries) {
+      // entries.forEach(entry => {
+        // entry.target.classList.toggle("is-visible");
+      // });
+    // };
+// 
+    // const observer = new IntersectionObserver(callback);
+// 
+    // const targets = document.querySelectorAll(".show-on-scroll");
+    // targets.forEach(function(target) {
+      // observer.observe(target);
+    // });
   }
 
   public scrollToSection(section: string) {

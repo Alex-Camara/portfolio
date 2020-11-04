@@ -1,5 +1,5 @@
 <template>
-    <div ref="compAboutMe" class="flex flex-col h-full lg:h-screen bg-primary">
+    <div ref="compAboutMe" class="flex flex-col h-full lg:h-screen bg-primary" data-aos="fade-up" data-aos-duration="2000">
 
         <div class="flex flex-col p-4 lg:flex-row  mx-5 mt-5 lg:mx-40 lg:mt-20 my-auto">
 

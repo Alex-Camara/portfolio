@@ -12,7 +12,7 @@
             </span>
         </button>  
 
-        <aside-menu class="md:hidden" :showMenu="showMenu"></aside-menu>
+        <aside-menu @scroll="scrollToSectionFromMenu($event)" class="md:hidden" :showMenu="showMenu"></aside-menu>
 
         <div class="flex">
             <div class="hidden md:flex items-center md:visible">
@@ -57,6 +57,7 @@ export default class Navbar extends Vue {
     private menuButtonText = 'Menu';
     private showMenu = false;
     private isActive = false;
+    private lastScrollPosition = window.pageYOffset;
 
     private changeShowMenu() {
         this.showMenu = !(this.showMenu);
@@ -67,17 +68,28 @@ export default class Navbar extends Vue {
         this.$emit('scroll', section);
     }
 
+    public scrollToSectionFromMenu(section: string) {
+        this.showMenu = false;
+        this.isActive = false;
+        this.$emit('scroll', section);
+    }
+
     private created() {
-        var prevScrollpos = window.pageYOffset;
-        window.onscroll = function() {
-            var currentScrollPos = window.pageYOffset;
-            if (prevScrollpos > currentScrollPos) {
-                document.getElementById("navbar").style.top = "0";                
-            } else {
-                document.getElementById("navbar").style.top = "-6rem";
-            }
-            prevScrollpos = currentScrollPos;
+        window.addEventListener('scroll', this.handleScroll);
+    }
+
+    public handleScroll(event) {
+        var currentScrollPosition = window.pageYOffset;
+
+        if (currentScrollPosition < 0) {
+            return
         }
+        if (this.lastScrollPosition > currentScrollPosition) {
+            document.getElementById("navbar").style.top = "0";                
+        } else {
+            document.getElementById("navbar").style.top = "-6rem";
+        }
+        this.lastScrollPosition = currentScrollPosition;
     }
 }
 </script>

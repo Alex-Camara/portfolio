@@ -18,7 +18,7 @@
                 <p>{{ selectedWorkplace.endDate }}</p>
             </div>
 
-            <div v-for="achievement in selectedWorkplace.achievements">
+            <div v-for="achievement in selectedWorkplace.achievements" :key="achievement">
                 <div class="flex mt-3">
                     <img src="../assets/terminal.svg" class="blue-icon h-4 mt-2 mr-1" />
                     <p>{{achievement}}</p>
