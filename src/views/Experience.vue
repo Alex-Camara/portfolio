@@ -1,10 +1,10 @@
 <template>
     <div ref="compExperience" class="grid grid-cols-1 w-11/12 h-screen">
       <div class="flex flex-col items-center lg:mt-20 my-auto">
-        <div class="w-5/6 lg:w-7/12" data-aos="fade-down" data-aos-duration="2000">
+        <div class="w-5/6 lg:w-7/12" data-aos="fade-down" data-aos-duration="2000" data-aos-once="true">
           <section-title :title="title"/>
         </div>
-        <tab-table class="w-5/6 lg:w-7/12 mt-14" data-aos="fade-up" data-aos-duration="1000"/>
+        <tab-table class="w-5/6 lg:w-7/12 mt-14" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true"/>
       </div>
     </div>
 </template>

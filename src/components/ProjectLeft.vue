@@ -2,7 +2,7 @@
     <div class="flex">
         
         <div v-if="project.getType() == 'web'" class="w-full lg:w-7/12 cursor-pointer accent-filter-transparent lg:accent-filter hover:no-filter ease-in-out duration-300 shadow-lg">
-            <img class="rounded-md" :src="getImageSource(0)" data-aos="fade-right" data-aos-duration="2000">
+            <img class="rounded-md" :src="getImageSource(0)" data-aos="fade-right" data-aos-duration="2000" data-aos-once="true">
         </div>
 
         <div v-else class="flex flex-col w-full lg:flex-row lg:justify-between lg:w-7/12">

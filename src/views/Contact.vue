@@ -1,6 +1,6 @@
 <template>
     <div ref="compContact" class="flex flex-col h-screen">
-        <div class="my-auto">
+        <div class="my-auto" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="200" data-aos-once="true">
 
             <div class="flex mx-auto w-full">
                 <div class="border-2 h-0 my-auto ml-2 border-light-primary w-4/12 lg:w-5/12 "></div>

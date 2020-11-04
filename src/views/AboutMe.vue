@@ -4,8 +4,8 @@
         <div class="flex flex-col p-4 lg:flex-row  mx-5 mt-5 lg:mx-40 lg:mt-20 my-auto">
 
                 <div class="flex flex-col lg:w-7/12">
-                    <section-title :title="title" data-aos="fade-down" data-aos-duration="3000"/>
-                    <div class="text-base lg:text-lg text-dark-white" data-aos="fade-up" data-aos-duration="2000">
+                    <section-title :title="title" data-aos="fade-down" data-aos-duration="3000" data-aos-once="true"/>
+                    <div class="text-base lg:text-lg text-dark-white" data-aos="fade-up" data-aos-duration="2000" data-aos-once="true">
                         <p class="mt-4 mb-8">{{ paragraph1 }}</p>
                         <p class="mb-8">{{ paragraph2 }}</p>
                         <p class="mb-8">{{ paragraph3 }}</p>
