@@ -1,6 +1,6 @@
 <template>
   <div class="flex justify-center md:justify-start h-screen bg-primary">
-    <hello :me="me" class="md:mt-32 lg:mt-0 md:ml-24" data-aos="fade-up"/>
+    <hello :me="me" class="md:mt-32 lg:mt-0 md:ml-24" data-aos="fade-up" data-aos-duration="3000" data-aos-delay="100"/>
   </div>
 </template>
 

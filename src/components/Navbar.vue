@@ -15,24 +15,26 @@
         <aside-menu @scroll="scrollToSectionFromMenu($event)" class="md:hidden" :showMenu="showMenu"></aside-menu>
 
         <div class="flex">
-            <div class="hidden md:flex items-center md:visible">
+            <div class="hidden md:flex items-center md:visible" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="100">
                 <div class="navbar-button-circle"></div>
                 <p class="navbar-button" @click="scrollToSection('aboutMe')">{{ sectionAboutMe }}</p>
             </div>
-            <div class="hidden md:flex items-center md:visible">
+            <div class="hidden md:flex items-center md:visible" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="300">
                 <div class="navbar-button-circle"></div>
                 <p class="navbar-button" @click="scrollToSection('experience')">{{ sectionExperience }}</p>
             </div>
-            <div class="hidden md:flex items-center md:visible">
+            <div class="hidden md:flex items-center md:visible" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="500">
                 <div class="navbar-button-circle"></div>
                 <p class="navbar-button" @click="scrollToSection('projects')">{{ sectionWork }}</p>
                 </div>
-            <div class="hidden md:flex items-center md:visible">
+            <div class="hidden md:flex items-center md:visible" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="700">
                 <div class="navbar-button-circle"></div>
                 <p class="navbar-button" @click="scrollToSection('contact')">{{ sectionContact }}</p>
             </div> 
         </div>
-        <blue-button class="hidden md:flex pr-10 items-center md:visible" :buttonText="resumeButtonText" />
+        <div class="hidden md:flex md:visible items-center" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="900">
+            <blue-button class="pr-10 " :buttonText="resumeButtonText" />
+        </div>
     </nav>
   </div>
 </template>
