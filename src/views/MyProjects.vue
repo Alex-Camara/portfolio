@@ -126,7 +126,17 @@ export default class MyProjects extends Vue {
         const cincoEnLineaProject = new Project(6, 'Cinco en Línea', 'web', cincoEnUnoDescription, cincoEnUnoGithubLink,
                                     cincoEnUnoWebLink, cincoEnUnoStack, cincoEnUnoImageSamples, false);
 
-        this.projects.push(progefiProject, obemeAndroidProject, tequilaIDEProject, roombaProject, obemeBackendProject, cincoEnLineaProject);
+        const resuelveFCImageSamples = [];
+        const resuelveFCDescription = 'Simple Ruby CLI program to calculate a player total pay based on a couple of factors';
+        const resuelveFCStack = ['Ruby'];
+
+        const resuelveFCWebLink = '';
+        const resuelveFCGithubLink = 'https://github.com/Alex-Camara/ResuelveFC';
+
+        const resuelveFCProject = new Project(7, 'ResuelveFC', 'web', resuelveFCDescription, resuelveFCGithubLink,
+                                    resuelveFCWebLink, resuelveFCStack, resuelveFCImageSamples, false);
+
+        this.projects.push(progefiProject, obemeAndroidProject, tequilaIDEProject, roombaProject, obemeBackendProject, cincoEnLineaProject, resuelveFCProject);
     }
 }
 </script>

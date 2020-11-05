@@ -56,11 +56,11 @@ export default class AboutMe extends Vue {
     private paragraph1 = 'Hi! I\'m Alex, a mexican software engineer.';
     private paragraph2 = 'I\'m advocated to create good quality software solutions. Eager to work as part of an awesome team to bring efficient solutions to complex problems.';
     private paragraph3 = 'I completed my bachelor of Software Engineering at Universidad Veracruzana, during the 2020 summer.';
-    private paragraph4 = 'My hobbies include gardening, cooking, learning new things and playing with my cat. Lately I enjoy working on side projects '
+    private paragraph4 = 'My hobbies include gardening, cooking, learñning new things and playing with my cat. Lately I enjoy working on side projects '
                         + 'that help me acquire new skills as well as to learn how thing work. I am especially hooked with the use of Ruby on Rails as '
                         + 'an API REST backend service and Vue js to consume the API.';
-    private interests = ["Vue", "Ruby", "Ruby on Rails", "JavaScript", "Android Studio", "Tailwindcss"];
-    private bucketList = ["Flutter", "Elixir"];
+    private interests = ["Vue", "Nodejs", "JavaScript", "Ruby", "Spring boot", "Android Studio", "Tailwindcss"];
+    private bucketList = ["Flutter", "Elixir", "Ruby on Rails"];
 
     public scrollToTop() {
         var rootElement = this.$refs.compAboutMe as HTMLDivElement;
