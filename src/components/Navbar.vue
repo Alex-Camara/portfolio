@@ -2,7 +2,7 @@
   <div class="nav-div relative">
     <nav id="navbar" class="nav flex fixed w-screen justify-end h-24">
 
-        <div class="hidden lg:flex my-auto self-start mr-auto ml-8 " @click="goHome()" data-aos="fade-right" data-aos-duration="2000" data-aos-delay="200" data-aos-once="true">
+        <div class="hidden lg:flex my-auto self-start mr-auto ml-8 " @click="reload()" data-aos="fade-right" data-aos-duration="2000" data-aos-delay="200" data-aos-once="true">
             <img :src="`${publicPath}logo.svg`" class="h-10 cursor-pointer">
         </div>
 
@@ -85,8 +85,9 @@ export default class Navbar extends Vue {
         window.addEventListener('scroll', this.handleScroll);
     }
 
-    public goHome() {
-        this.$router.push("/")
+    public reload() {
+        this.$router.push("/");
+        location.reload();
     }
 
     public handleScroll(event) {
