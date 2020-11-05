@@ -18,9 +18,9 @@
                 </div>
         </div>
 
-        <div class="flex flex-col p-4 mx-5 mt-2 lg:mx-24">
+        <div class="flex flex-col lg:flex-row p-4 mx-5 mt-2 lg:mx-24">
 
-            <div class="flex flex-col lg:mx-auto">
+            <div class="flex flex-col lg:mx-auto" data-aos="fade-right" data-aos-duration="2000" data-aos-once="true">
                 <p class="text-dark-white lg:text-lg">Some technologies I've recently used:</p>
                 <div class="flex flex-col flex-wrap h-32 mt-4 ">
                     <div class="flex items-center pr-3 py-1 text-dark-white text-sm" v-for="interest in interests" :key="interest">
@@ -30,7 +30,7 @@
                 </div>
             </div>
 
-            <div class="mt-8 flex flex-col lg:mx-auto" >
+            <div class="mt-8 flex flex-col lg:mx-auto lg:mt-0" data-aos="fade-left" data-aos-duration="2000" data-aos-once="true">
                 <p class="text-dark-white lg:text-lg">Bucket list</p>
                 <div class="flex flex-col flex-wrap mt-4">
                     <div class="flex items-center pr-3 py-1 text-dark-white text-sm" v-for="bucketItem in bucketList" :key="bucketItem">
@@ -59,8 +59,8 @@ export default class AboutMe extends Vue {
     private paragraph4 = 'My hobbies include gardening, cooking, learning new things and playing with my cat. Lately I enjoy working on side projects '
                         + 'that help me acquire new skills as well as to learn how thing work. I am especially hooked with the use of Ruby on Rails as '
                         + 'an API REST backend service and Vue js to consume the API.';
-    private interests = ["Vue", "Ruby on Rails", "Ruby", "JavaScript", "Flutter", "Web development", "Mobile"];
-    private bucketList = ["Flutter"];
+    private interests = ["Vue", "Ruby", "Ruby on Rails", "JavaScript", "Android Studio", "Tailwindcss"];
+    private bucketList = ["Flutter", "Elixir"];
 
     public scrollToTop() {
         var rootElement = this.$refs.compAboutMe as HTMLDivElement;
