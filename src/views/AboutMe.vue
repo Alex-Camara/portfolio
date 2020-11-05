@@ -8,7 +8,11 @@
                     <div class="text-base lg:text-lg text-dark-white" data-aos="fade-up" data-aos-duration="2000" data-aos-once="true">
                         <p class="mt-4 mb-4">{{ paragraph1 }}</p>
                         <p class="mb-4">{{ paragraph2 }}</p>
-                        <p class="mb-4">{{ paragraph3 }}</p>
+                        <div class="flex flex-wrap mb-4">
+                            <p>{{ paragraph3 }} &shy;</p>
+                            <a href="https://www.uv.mx/" target="_blank" class="link-text">{{ university }}</a>
+                            <p>{{ paragraph3_1 }}</p>
+                        </div>
                         <p>{{ paragraph4 }}</p>
                     </div>
                 </div>
@@ -55,8 +59,10 @@ export default class AboutMe extends Vue {
     private title = 'About me';
     private paragraph1 = 'Hi! I\'m Alex, a mexican software engineer.';
     private paragraph2 = 'I\'m advocated to create good quality software solutions. Eager to work as part of an awesome team to bring efficient solutions to complex problems.';
-    private paragraph3 = 'I completed my bachelor of Software Engineering at Universidad Veracruzana, during the 2020 summer.';
-    private paragraph4 = 'My hobbies include gardening, cooking, learñning new things and playing with my cat. Lately I enjoy working on side projects '
+    private paragraph3 = 'I completed my bachelor of Software Engineering at'
+    private university = 'Universidad Veracruzana';
+    private paragraph3_1 = ', during the 2020 summer.';
+    private paragraph4 = 'My hobbies include gardening, cooking, learning new things and playing with my cat. Lately I enjoy working on side projects '
                         + 'that help me acquire new skills as well as to learn how thing work. I am especially hooked with the use of Ruby on Rails as '
                         + 'an API REST backend service and Vue js to consume the API.';
     private interests = ["Vue", "Nodejs", "JavaScript", "Ruby", "Spring boot", "Android Studio", "Tailwindcss"];
