@@ -16,6 +16,19 @@
     background-color: rgba(10, 25, 47, 0.8);
 }
 
+.bullet {
+    @apply transition rounded-full bg-accent h-1 w-2 mr-4 cursor-pointer ease-in-out duration-300;
+}
+
+.bullet-text {
+    @apply text-dark-white;
+}
+
+.bullet:hover,
+.bullet-text:hover + .bullet{
+    @apply transition transform bg-white scale-x-150 ease-in-out duration-300;
+}
+
 @layer utilities {
     @responsive {
         .accent-filter {
