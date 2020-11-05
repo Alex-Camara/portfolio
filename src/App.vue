@@ -49,6 +49,15 @@ export default class App extends Vue {
                       'https://telegram.me/alexcamara', 'https://www.instagram.com/alex_arcam/');
   }
 
+  mounted() {
+    var self = this;
+    window.addEventListener('hashchange', function() {
+      self.scrollToSection(window.location.hash.substring(1));
+      // var hash = window.location.hash.substring(1);
+      
+    })
+  }
+
   public scrollToSection(section: string) {
     switch(section) {
       case 'aboutMe':

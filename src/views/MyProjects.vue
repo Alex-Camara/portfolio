@@ -46,6 +46,8 @@ export default class MyProjects extends Vue {
         window.scrollBy({
             top: top,
             behavior: 'smooth'});
+
+    window.location.assign("#projects");
     }
 
     public get notPinnedProjects() {

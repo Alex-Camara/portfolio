@@ -55,6 +55,8 @@ export default class Contact extends Vue {
         window.scrollBy({
             top: top,
             behavior: 'smooth'});
+
+        window.location.assign("#contact");
     }
 
     public openEmail(): void {

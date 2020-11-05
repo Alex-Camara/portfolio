@@ -42,6 +42,8 @@ export default class AboutMe extends Vue {
         window.scrollBy({
             top: top,
             behavior: 'smooth'});
+
+        window.location.assign("#aboutMe");
     }
 }
 </script>

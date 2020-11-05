@@ -1,5 +1,5 @@
 <template>
-    <div ref="compExperience" class="h-full pt-20 lg:h-screen">
+    <div href="#something" ref="compExperience" class="h-full pt-20 lg:h-screen">
       <div class="flex flex-col lg:items-center my-auto mx-8 lg:mx-auto">
         <div class="lg:w-7/12" data-aos="fade-down" data-aos-duration="2000" data-aos-once="true">
           <section-title :title="title"/>
@@ -29,6 +29,8 @@ export default class Experience extends Vue {
         window.scrollBy({
             top: top,
             behavior: 'smooth'});
+
+        window.location.assign("#experience");
     }
 }
 </script>
