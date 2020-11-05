@@ -53,8 +53,6 @@ export default class App extends Vue {
     var self = this;
     window.addEventListener('hashchange', function() {
       self.scrollToSection(window.location.hash.substring(1));
-      // var hash = window.location.hash.substring(1);
-      
     })
   }
 
