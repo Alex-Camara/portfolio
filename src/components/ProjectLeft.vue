@@ -14,7 +14,7 @@
             data-aos="fade-up" data-aos-duration="3000" data-aos-once="true">
         </div>
 
-        <div class="flex flex-col justify-center mx-auto w-full left-foreground lg:w-5/12" data-aos="fade-left" data-aos-duration="2000" data-aos-once="true">
+        <div class="flex flex-col justify-center mx-auto w-full left-foreground lg:w-5/12">
                 <p class="text-accent text-lg text-right">Pinned project</p>
                 <p class="text-white text-xl font-bold text-right">{{ project.getName() }}</p>
 
@@ -45,6 +45,7 @@
 </template>
 
 <script lang="ts">
+//data-aos="fade-left" data-aos-duration="2000" data-aos-once="true"
 import { Project } from '@/classes/Project';
 import { Component, Vue, Prop } from 'vue-property-decorator';
 @Component
