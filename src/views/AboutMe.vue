@@ -26,7 +26,7 @@
 
             <div class="flex flex-col lg:mx-auto" data-aos="fade-right" data-aos-duration="2000" data-aos-once="true">
                 <p class="text-dark-white lg:text-lg">Some technologies I've recently used:</p>
-                <div class="flex flex-col flex-wrap h-32 mt-4 ">
+                <div class="flex flex-col flex-wrap h-48 lg:h-32 mt-4 ">
                     <div class="flex items-center pr-3 py-1 text-dark-white text-sm" v-for="interest in interests" :key="interest">
                         <p class="bullet-text order-2">{{ interest }}</p>
                         <div class="bullet order-1"></div>
@@ -65,7 +65,7 @@ export default class AboutMe extends Vue {
     private paragraph4 = 'My hobbies include gardening, cooking, learning new things and playing with my cat. Lately I enjoy working on side projects '
                         + 'that help me acquire new skills as well as to learn how thing work. I am especially hooked with the use of Ruby on Rails as '
                         + 'an API REST backend service and Vue js to consume the API.';
-    private interests = ["Vue", "Nodejs", "JavaScript", "Ruby", "Spring boot", "Android Studio", "Tailwindcss"];
+    private interests = ["Vue", "Nodejs", "JavaScript", "Java", "Ruby", "Spring boot", "Android Studio", "CSS", "Tailwindcss"];
     private bucketList = ["Flutter", "Elixir", "Ruby on Rails"];
 
     public scrollToTop() {
