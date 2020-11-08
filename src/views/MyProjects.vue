@@ -74,7 +74,7 @@ export default class MyProjects extends Vue {
                                             progefiWebLink, progefiStack, progefiImageSamples, true);
 
         const obemeAndroidImageSamples = ['obeme1.png', 'obeme2.png', 'obeme3.png'];
-        const obemeAndroidDescription = 'Android app aimed to recolect data from medical students during their residence in hospitals.'
+        const obemeAndroidDescription = 'Android app aimed to collect data from medical students during their residence in hospitals.'
                                         + ' Currently in production.';
         const obemeAndroidStack = ['Android', 'Kotlin', 'Room'];
 
