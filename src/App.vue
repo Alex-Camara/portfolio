@@ -5,7 +5,7 @@
     <right-panel :me="me"/>
     <home :me="me" class="mx-5 md:mx-24"/>
     <about-me ref="compAboutMe" class="md:mx-24"/>
-    <experience ref="compExperience" class="md:mx-24"/>
+    <experience ref="compExperience" class="md:mx-24 mt-10"/>
     <my-projects ref="compProjects" class="md:mx-20"/>
     <contact ref="compContact" :me="me" class="md:mx-24 mt-10 mb-10 lg:mb-0"/>
     <footer-info class="md:mx-24"/>
