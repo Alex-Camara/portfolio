@@ -1,5 +1,5 @@
 <template>
-    <div ref="compExperience" class="flex h-full lg:h-screen">
+    <div ref="compExperience" class="h-full lg:h-screen">
       <div class="flex flex-col lg:items-center my-auto mx-8 lg:mx-32">
         <div class="lg:w-9/12" data-aos="fade-down" data-aos-duration="2000" data-aos-once="true">
           <section-title :title="title"/>

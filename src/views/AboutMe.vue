@@ -24,19 +24,24 @@
 
         <div class="flex flex-col lg:flex-row p-4 mx-5 mt-2 lg:mx-24">
 
-            <div class="flex flex-col lg:mx-auto" data-aos="fade-right" data-aos-duration="2000" data-aos-once="true">
-                <p class="text-dark-white lg:text-lg">Some technologies I've recently used:</p>
-                <div class="flex flex-col flex-wrap h-48 lg:h-32 mt-4 ">
+            <div class="flex flex-col lg:mx-auto">
+                <p class="text-dark-white lg:text-lg"
+                data-aos="fade-right" data-aos-duration="2000" data-aos-once="true"
+                >Some technologies I've recently used:</p>
+                <div class="flex flex-col flex-wrap h-48 lg:h-32 mt-4 "
+                data-aos="fade-right" data-aos-duration="2000" data-aos-once="true">
                     <div class="flex items-center pr-3 py-1 text-dark-white text-sm" v-for="interest in interests" :key="interest">
                         <p class="bullet-text order-2">{{ interest }}</p>
                         <div class="bullet order-1"></div>
                     </div>
                 </div>
             </div>
-
-            <div class="mt-8 flex flex-col lg:mx-auto lg:mt-0" data-aos="fade-left" data-aos-duration="2000" data-aos-once="true">
-                <p class="text-dark-white lg:text-lg">Bucket list</p>
-                <div class="flex flex-col flex-wrap mt-4">
+<!--  -->
+            <div class="mt-8 flex flex-col lg:mx-auto lg:mt-0">
+                <p class="text-dark-white lg:text-lg"
+                data-aos="fade-up" data-aos-duration="2000" data-aos-once="true">Bucket list</p>
+                <div class="flex flex-col flex-wrap mt-4"
+                data-aos="fade-up" data-aos-duration="2000" data-aos-once="true">
                     <div class="flex items-center pr-3 py-1 text-dark-white text-sm" v-for="bucketItem in bucketList" :key="bucketItem">
                         <p class="bullet-text order-2">{{ bucketItem }}</p>
                         <div class="bullet order-1"></div>
@@ -48,6 +53,8 @@
 </template>
 
 <script lang="ts">
+//data-aos="fade-down" data-aos-duration="2000" data-aos-once="true"
+//data-aos="fade-left" data-aos-duration="2000" data-aos-once="true"
 import { Component, Vue, Ref } from 'vue-property-decorator';
 import SectionTitle from '@/components/SectionTitle.vue';
 @Component({

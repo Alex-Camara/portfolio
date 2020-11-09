@@ -16,9 +16,7 @@ module.exports = {
         'dark-gray': '#8892b0',
       },
       fontFamily: {
-        body: ['Nunito'],
-        mont: ['Montserrat'],
-        didact: ['Didact Gotic'],
+        rubik: ['Rubik', 'sans-serif'],
       },
       fontSize: {
         huge: '6rem'

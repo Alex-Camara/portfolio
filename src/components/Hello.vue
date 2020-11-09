@@ -3,7 +3,9 @@
 
       <div class="flex flex-col justify-center my-auto">
         <p class="text-base text-accent">{{ greetings }}</p>
-        <p class="text-4xl text-white mb-1 md:mb-1 font-bold md:text-huge leading-none">{{ name }}</p>
+        <!-- <p class="text-4xl text-white mb-1 md:mb-1 font-bold md:text-huge leading-none cursor-default">{{ name }}</p>
+         -->
+         <!-- <name class="w-3/4"/> -->
         <p class="text-4xl text-light-primary mb-2 md:mb-5 font-bold md:text-6xl leading-tight">{{ slogan }}</p>
         <p class="text-base text-dark-white">{{ introduction }}  </p>
 
@@ -16,7 +18,12 @@
 <script lang="ts">
 import { Component, Vue, Prop } from 'vue-property-decorator';
 import { Me } from "@/classes/Me";
-@Component
+import Name from '@/components/Name.vue';
+@Component({
+  components: {
+    // Name,
+  },
+})
 export default class Hello extends Vue {
   @Prop()
   public me!: Me;
