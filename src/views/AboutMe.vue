@@ -36,7 +36,7 @@
                     </div>
                 </div>
             </div>
-<!--  -->
+
             <div class="mt-8 flex flex-col lg:mx-auto lg:mt-0">
                 <p class="text-dark-white lg:text-lg"
                 data-aos="fade-up" data-aos-duration="2000" data-aos-once="true">Bucket list</p>
@@ -53,8 +53,6 @@
 </template>
 
 <script lang="ts">
-//data-aos="fade-down" data-aos-duration="2000" data-aos-once="true"
-//data-aos="fade-left" data-aos-duration="2000" data-aos-once="true"
 import { Component, Vue, Ref } from 'vue-property-decorator';
 import SectionTitle from '@/components/SectionTitle.vue';
 @Component({

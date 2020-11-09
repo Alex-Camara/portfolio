@@ -2,10 +2,10 @@
   <div class="flex sm:content-start place-items-start">
 
       <div class="flex flex-col justify-center my-auto">
-        <p class="text-base text-accent">{{ greetings }}</p>
+        <p class="text-base text-accent mb-2">{{ greetings }}</p>
         <!-- <p class="text-4xl text-white mb-1 md:mb-1 font-bold md:text-huge leading-none cursor-default">{{ name }}</p>
          -->
-         <!-- <name class="w-3/4"/> -->
+        <name class="w-10/12 lg:w-3/4 mb-5"/>
         <p class="text-4xl text-light-primary mb-2 md:mb-5 font-bold md:text-6xl leading-tight">{{ slogan }}</p>
         <p class="text-base text-dark-white">{{ introduction }}  </p>
 
@@ -13,6 +13,7 @@
       </div>
       
   </div>
+
 </template>
 
 <script lang="ts">
@@ -21,7 +22,7 @@ import { Me } from "@/classes/Me";
 import Name from '@/components/Name.vue';
 @Component({
   components: {
-    // Name,
+    Name,
   },
 })
 export default class Hello extends Vue {

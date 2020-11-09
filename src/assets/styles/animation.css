@@ -1,0 +1,71 @@
+#name {
+    animation: fill-animation 0.5s ease forwards 7s;
+}
+
+#name path:nth-child(1) {
+    stroke-dasharray: 342;
+    stroke-dashoffset: 342;
+    animation: letter-animation 2s ease forwards;
+}
+#name path:nth-child(2) {
+    stroke-dasharray: 175;
+    stroke-dashoffset: 175;
+    animation: letter-animation 2s ease forwards 1s;
+}
+#name path:nth-child(3) {
+    stroke-dasharray: 290;
+    stroke-dashoffset: 290;
+    animation: letter-animation 2s ease forwards 2s;
+}
+#name path:nth-child(4) {
+    stroke-dasharray: 254;
+    stroke-dashoffset: 254;
+    animation: letter-animation 2s ease forwards 2.5s;
+}
+#name path:nth-child(5) {
+    stroke-dasharray: 317;
+    stroke-dashoffset: 317;
+    animation: letter-animation 2s ease forwards 3s;
+}
+#name path:nth-child(6) {
+    stroke-dasharray: 345;
+    stroke-dashoffset: 345;
+    animation: letter-animation 2s ease forwards 4s;
+}
+#name path:nth-child(7) {
+    stroke-dasharray: 394;
+    stroke-dashoffset: 394;
+    animation: letter-animation 2s ease forwards 4.5s;
+}
+#name path:nth-child(8) {
+    stroke-dasharray: 284;
+    stroke-dashoffset: 284;
+    animation: letter-animation 2s ease forwards 5s;
+}
+#name path:nth-child(9) {
+    stroke-dasharray: 164;
+    stroke-dashoffset: 164;
+    animation: letter-animation 2s ease forwards 5.5s;
+}
+#name path:nth-child(10) {
+    stroke-dasharray: 284;
+    stroke-dashoffset: 284;
+    animation: letter-animation 2s ease forwards 6s;
+}
+
+@keyframes letter-animation {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes fill-animation {
+    from {
+        fill: transparent;
+        border: #E6F1FF;
+    }
+    to {
+        fill: #E6F1FF;
+        border: transparent;
+    }
+}

@@ -53,13 +53,8 @@
     background: #64FFDA;
 }
 
-/* * { */
-    /* box-sizing: border-box; */
-    /* font-family: 'Concert One' */
-/* } */
-
-.name {
-    fill: #E6F1FF;
+* {
+    box-sizing: border-box;
 }
 
 @import './buttons.scss';
