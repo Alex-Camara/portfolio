@@ -8,9 +8,9 @@
         <div v-else class="flex flex-col w-full lg:flex-row lg:justify-between lg:w-7/12">
             <img :src="getImageSource(0)" class="w-1/2 ml-auto mx-auto lg:mx-0 lg:w-4/12 rounded-md cursor-pointer accent-filter-transparent lg:visible lg:accent-filter hover:no-filter ease-in-out duration-300 shadow-2xl"
             data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
-            <img :src="getImageSource(1)" class="hidden w-0 rounded-md cursor-pointer accent-filter-transparent lg:flex lg:w-4/12 lg:accent-filter hover:no-filter ease-in-out duration-300 shadow-2xl"
+            <img :src="getImageSource(1)" class="hidden w-0 rounded-md cursor-pointer accent-filter-transparent lg:inline lg:w-4/12 lg:accent-filter hover:no-filter ease-in-out duration-300 shadow-2xl"
             data-aos="fade-down" data-aos-duration="2000" data-aos-once="true">
-            <img :src="getImageSource(2)" class="hidden w-0 rounded-md cursor-pointer accent-filter-transparent lg:flex lg:w-4/12 lg:accent-filter hover:no-filter ease-in-out duration-300 shadow-2xl"
+            <img :src="getImageSource(2)" class="hidden w-0 rounded-md cursor-pointer accent-filter-transparent lg:inline lg:w-4/12 lg:accent-filter hover:no-filter ease-in-out duration-300 shadow-2xl"
             data-aos="fade-up" data-aos-duration="3000" data-aos-once="true">
         </div>
 

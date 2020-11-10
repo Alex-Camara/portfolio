@@ -1,7 +1,7 @@
 <template>
     <div ref="compAboutMe" class="flex flex-col h-full">
 
-        <div class="flex flex-col p-4 lg:flex-row  mx-5 mt-5 lg:mx-24 lg:mt-20 my-auto">
+        <div id="about-me-container" class="flex flex-col p-4 lg:flex-row  mx-5 mt-5 lg:mx-24 lg:mt-20 my-auto">
 
                 <div class="flex flex-col lg:w-9/12 lg:pr-10">
                     <section-title :title="title" data-aos="fade-right" data-aos-duration="3000" data-aos-once="true"/>
@@ -73,9 +73,31 @@ export default class AboutMe extends Vue {
     private interests = ["Vue", "Nodejs", "JavaScript", "Java", "Ruby", "Spring boot", "Android Studio", "CSS", "Tailwindcss"];
     private bucketList = ["Flutter", "Elixir", "Ruby on Rails"];
 
+    private rootElement: HTMLElement;
+
+    private mounted() {
+        this.rootElement = this.$refs.compAboutMe as HTMLDivElement;
+        this.rootElement.addEventListener('wheel', this.scrollToNextSection);
+    }
+
+    public scrollToNextSection() {
+        var scrollTop = document.getElementById("about-me-container").scrollTop;
+        var innerHeight = window.innerHeight;
+        var scrollHeight = this.rootElement.scrollHeight;
+
+        if ((scrollTop + innerHeight) >= scrollHeight) {
+            debugger
+        } else {
+            console.info(scrollTop)
+            console.info(innerHeight)
+            console.info(scrollHeight)
+        }
+        // this.rootElement.removeEventListener('wheel', this.scrollToNextSection)
+        // this.$emit('next', 'experience');
+    }
+
     public scrollToTop() {
-        var rootElement = this.$refs.compAboutMe as HTMLDivElement;
-        var offsets = rootElement.getBoundingClientRect();
+        var offsets = this.rootElement.getBoundingClientRect();
         var top = offsets.top;
         window.scrollBy({
             top: top,

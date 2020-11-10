@@ -44,12 +44,12 @@
             :src="getImageSource(0)" class="rounded-md"
             data-aos="fade-up" data-aos-duration="1000" data-aos-once="true"/>
         </div>
-        <div class="hidden w-0 cursor-pointer accent-filter-transparent lg:flex lg:w-4/12 mx-10 lg:accent-filter hover:no-filter ease-in-out duration-300 shadow-2xl">
+        <div class="hidden w-0 cursor-pointer accent-filter-transparent lg:inline lg:w-4/12 mx-10 lg:accent-filter hover:no-filter ease-in-out duration-300 shadow-2xl">
           <img
             :src="getImageSource(1)" class="rounded-md "
             data-aos="fade-down" data-aos-duration="2000" data-aos-once="true"/>
         </div>
-        <div class="hidden w-0 cursor-pointer accent-filter-transparent lg:flex lg:w-4/12 lg:accent-filter hover:no-filter ease-in-out duration-300 shadow-2xl">
+        <div class="hidden w-0 cursor-pointer accent-filter-transparent lg:inline lg:w-4/12 lg:accent-filter hover:no-filter ease-in-out duration-300 shadow-2xl">
           <img
             :src="getImageSource(2)" class="rounded-md "
             data-aos="fade-up" data-aos-duration="3000" data-aos-once="true"/>

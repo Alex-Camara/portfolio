@@ -1,5 +1,5 @@
 <template>
-  <div class="flex justify-center md:justify-start h-screen bg-primary">
+  <div id="home" class="flex justify-center md:justify-start h-screen">
     <hello :me="me" class="md:mt-32 lg:mt-0 md:ml-24" data-aos="fade-up" data-aos-duration="3000" data-aos-delay="100"/>
   </div>
 </template>
@@ -16,5 +16,18 @@ import { Me } from "@/classes/Me";
 export default class Home extends Vue {
   @Prop()
   public me!: Me;
+  
+  private element: HTMLElement;
+
+  private mounted() {
+    var self = this;
+    this.element = document.getElementById("home");
+    this.element.addEventListener('wheel', self.scrollToNextSection);
+  }
+
+  public scrollToNextSection() {
+    this.element.removeEventListener('wheel', this.scrollToNextSection)
+    this.$emit('next', 'aboutMe');
+  }
 }
 </script>

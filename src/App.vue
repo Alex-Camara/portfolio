@@ -3,7 +3,7 @@
     <navbar @scroll="scrollToSection($event)"/>
     <contact-panel :me="me" class="hidden lg:flex top-0 left-0 h-screen w-24 lg:fixed z-30"/>
     <right-panel :me="me"/>
-    <home :me="me" class="mx-5 md:mx-24"/>
+    <home :me="me" class="mx-5 md:mx-24" @next="scrollToSection($event)"/>
     <about-me ref="compAboutMe" class="md:mx-24"/>
     <experience ref="compExperience" class="md:mx-24 mt-10"/>
     <my-projects ref="compProjects" class="md:mx-20"/>
