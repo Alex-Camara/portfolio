@@ -45,7 +45,6 @@
 </template>
 
 <script lang="ts">
-//data-aos="fade-left" data-aos-duration="2000" data-aos-once="true"
 import { Project } from '@/classes/Project';
 import { Component, Vue, Prop } from 'vue-property-decorator';
 @Component

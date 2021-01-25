@@ -66,11 +66,6 @@ export default class Navbar extends Vue {
     private lastScrollPosition = window.pageYOffset;
     private publicPath = process.env.BASE_URL;
 
-    private changeShowMenu() {
-        this.showMenu = !(this.showMenu);
-        this.isActive = !this.isActive;
-    }
-
     public scrollToSection(section: string) {
         this.$emit('scroll', section);
     }
@@ -81,27 +76,32 @@ export default class Navbar extends Vue {
         this.$emit('scroll', section);
     }
 
-    private created() {
-        window.addEventListener('scroll', this.handleScroll);
-    }
-
     public reload() {
-        this.$router.push("/");
+        this.$router.push('/');
         location.reload();
     }
 
     public handleScroll(event) {
-        var currentScrollPosition = window.pageYOffset;
+        const currentScrollPosition = window.pageYOffset;
 
         if (currentScrollPosition < 0) {
-            return
+            return;
         }
         if (this.lastScrollPosition > currentScrollPosition) {
-            document.getElementById("navbar").style.top = "0";                
+            document.getElementById('navbar').style.top = '0';
         } else {
-            document.getElementById("navbar").style.top = "-6rem";
+            document.getElementById('navbar').style.top = '-6rem';
         }
         this.lastScrollPosition = currentScrollPosition;
+    }
+
+    private created() {
+        window.addEventListener('scroll', this.handleScroll);
+    }
+
+    private changeShowMenu() {
+        this.showMenu = !(this.showMenu);
+        this.isActive = !this.isActive;
     }
 }
 </script>

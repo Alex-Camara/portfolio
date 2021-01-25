@@ -46,7 +46,7 @@ export class Project {
     public getWebLink(): string {
         return this.webLink;
     }
-    public isPinned(){
+    public isPinned() {
         return this.pinned;
     }
 }

@@ -59,8 +59,8 @@
 </template>
 
 <script lang="ts">
-import { Project } from "@/classes/Project";
-import { Component, Vue, Prop } from "vue-property-decorator";
+import { Project } from '@/classes/Project';
+import { Component, Vue, Prop } from 'vue-property-decorator';
 @Component
 export default class ProjectRight extends Vue {
   @Prop()
@@ -68,7 +68,7 @@ export default class ProjectRight extends Vue {
 
   public getImageSource(index: number): string {
     const imageSample: string[] = this.project.getImageSamples();
-    return require("../assets/" + imageSample[index]);
+    return require('../assets/' + imageSample[index]);
   }
 }
 </script>

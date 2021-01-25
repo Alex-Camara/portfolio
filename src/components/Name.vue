@@ -21,14 +21,5 @@
 import { Component, Vue } from 'vue-property-decorator';
 @Component
 export default class Name extends Vue {
-    // private title = 'Projects I\'ve worked on';
-    
-    // public mounted() {
-        // const logo: any = document.querySelectorAll("#name path");
-        // debugger
-        // for (let i = 0; i < logo.length; i++) {
-            // console.log(`letter ${i} is ${logo[i].getTotalLength()}`)
-        // }
-    // }
 }
 </script>

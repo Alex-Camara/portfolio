@@ -11,7 +11,7 @@
 
 <script lang="ts">
 import { Component, Vue, Prop } from 'vue-property-decorator';
-import { Me } from "@/classes/Me";
+import { Me } from '@/classes/Me';
 @Component
 export default class RightPanel extends Vue {
   @Prop()

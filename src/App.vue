@@ -1,14 +1,17 @@
 <template>
   <div id="app" class="bg-primary">
-    <navbar @scroll="scrollToSection($event)"/>
-    <contact-panel :me="me" class="hidden lg:flex top-0 left-0 h-screen w-24 lg:fixed z-30"/>
-    <right-panel :me="me"/>
-    <home :me="me" class="mx-5 md:mx-24" @next="scrollToSection($event)"/>
-    <about-me id="aboutMe" ref="compAboutMe" class="md:mx-24"/>
-    <experience id="experience" ref="compExperience" class="md:mx-24 mt-10"/>
-    <my-projects ref="compProjects" class="md:mx-20"/>
-    <contact ref="compContact" :me="me" class="md:mx-24 mt-10 mb-10 lg:mb-0"/>
-    <footer-info class="md:mx-24"/>
+    <navbar @scroll="scrollToSection($event)" />
+    <contact-panel
+      :me="me"
+      class="hidden lg:flex top-0 left-0 h-screen w-24 lg:fixed z-30"
+    />
+    <right-panel :me="me" />
+    <home :me="me" class="mx-5 md:mx-24" @next="scrollToSection($event)" />
+    <about-me id="aboutMe" ref="compAboutMe" class="md:mx-24" />
+    <experience id="experience" ref="compExperience" class="md:mx-24 mt-10" />
+    <my-projects ref="compProjects" class="md:mx-20" />
+    <contact ref="compContact" :me="me" class="md:mx-24 mt-10 mb-10 lg:mb-0" />
+    <footer-info class="md:mx-24" />
   </div>
 </template>
 
@@ -21,9 +24,9 @@ import Experience from '@/views/Experience.vue';
 import ContactPanel from '@/components/ContactPanel.vue';
 import RightPanel from '@/components/RightPanel.vue';
 import MyProjects from '@/views/MyProjects.vue';
-import Contact from '@/views/Contact.vue'
-import FooterInfo from '@/views/FooterInfo.vue'
-import { Me } from "@/classes/Me";
+import Contact from '@/views/Contact.vue';
+import FooterInfo from '@/views/FooterInfo.vue';
+import { Me } from '@/classes/Me';
 import { VueClass } from '@vue/test-utils';
 
 @Component({
@@ -43,75 +46,60 @@ export default class App extends Vue {
   private me!: Me;
   private lastScrollTopPosition = 0;
 
-  private created() {
-    document.title = 'Alex Cámara';
-
-    this.me = new Me(1, 'Alejandro Cámara', 'Alex Cámara', 'arcamsoft@gmail.com', 'https://twitter.com/alexarcam',
-                     'https://www.linkedin.com/in/alex-camara/', 'https://github.com/Alex-Camara',
-                      'https://telegram.me/alexcamara', 'https://www.instagram.com/alex_arcam/');
-  }
-
-  mounted() {
-    var self = this;
-    window.addEventListener('hashchange', function() {
-      self.scrollToSection(window.location.hash.substring(1));
-    })
-
-    var container = document.getElementById("app");
-    container.addEventListener('wheel', this.scrollToNextSection);
-  }
-
   public scrollToNextSection() {
-    // var rootElement = this.$refs.compAboutMe as HTMLDivElement;
-    var container = document.getElementById("app");
-    var aboutMeElement = document.getElementById("aboutMe");
-    var experienceElement = document.getElementById("experience");
-    var scrollTop = aboutMeElement.scrollTop;
-    var innerHeight = aboutMeElement.clientHeight;
-    var scrollHeight = aboutMeElement.scrollHeight;
+    const container = document.getElementById('app');
+    const aboutMeElement = document.getElementById('aboutMe');
+    const experienceElement = document.getElementById('experience');
+    const scrollTop = aboutMeElement.scrollTop;
+    const innerHeight = aboutMeElement.clientHeight;
+    const scrollHeight = aboutMeElement.scrollHeight;
 
-    var eScrollTop = experienceElement.scrollTop;
-    var eInnerHeight = experienceElement.clientHeight;
-    var eScrollHeight = experienceElement.scrollHeight;
-
-    if (scrollHeight - scrollTop - innerHeight < 1) {
-      // this.scrollToSection('experience');
-        console.info("PASO ab")
-        console.info(scrollTop)
-        console.info(innerHeight)
-        console.info(scrollHeight)
-        // console.info("PASO e")
-        // console.info(eScrollTop)
-        // console.info(eInnerHeight)
-        // console.info(eScrollHeight)
-    } else {
-      console.info("NO PASO a")
-        console.info(scrollTop)
-        console.info(innerHeight)
-        console.info(scrollHeight)
-
-      // console.info("NO PASO e")
-        // console.info(eScrollTop)
-        // console.info(eInnerHeight)
-        // console.info(eScrollHeight)
-    }
+    const eScrollTop = experienceElement.scrollTop;
+    const eInnerHeight = experienceElement.clientHeight;
+    const eScrollHeight = experienceElement.scrollHeight;
   }
 
   public scrollToSection(section: string) {
-    switch(section) {
+    switch (section) {
       case 'aboutMe':
         (this.$refs.compAboutMe as AboutMe).scrollToTop();
-      break;
+        break;
       case 'experience':
         (this.$refs.compExperience as Experience).scrollToTop();
-      break;
+        break;
       case 'projects':
         (this.$refs.compProjects as MyProjects).scrollToTop();
-      break;
+        break;
       case 'contact':
         (this.$refs.compContact as Contact).scrollToTop();
-      break;
+        break;
     }
+  }
+
+  private created() {
+    document.title = 'Alex Cámara';
+
+    this.me = new Me(
+      1,
+      'Alejandro Cámara',
+      'Alex Cámara',
+      'arcamsoft@gmail.com',
+      'https://twitter.com/alexarcam',
+      'https://www.linkedin.com/in/alex-camara/',
+      'https://github.com/Alex-Camara',
+      'https://telegram.me/alexcamara',
+      'https://www.instagram.com/alex_arcam/',
+    );
+  }
+
+  private mounted() {
+    const self = this;
+    window.addEventListener('hashchange', () => {
+      self.scrollToSection(window.location.hash.substring(1));
+    });
+
+    const container = document.getElementById('app');
+    container.addEventListener('wheel', this.scrollToNextSection);
   }
 }
 </script>

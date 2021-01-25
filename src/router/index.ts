@@ -3,7 +3,7 @@ import VueRouter, { RouteConfig } from 'vue-router';
 import Home from '../views/Home.vue';
 import AboutMe from '../views/AboutMe.vue';
 import Contact from '../views/Contact.vue';
-import MyProjects from '../views/MyProjects.vue'
+import MyProjects from '../views/MyProjects.vue';
 import Experience from '../views/Experience.vue';
 
 Vue.use(VueRouter);

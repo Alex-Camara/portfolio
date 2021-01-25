@@ -42,15 +42,20 @@ export default class TabTable extends Vue {
     }
 
     private created() {
-        const workplaceISP = new Workplace(1, 'Software Engineer', 'Observatorio de Educación Médica y Derechos Humanos', 'OBEME', 'November 2019', 'July 2020', 'https://www.uv.mx/isp/');
-        const workplaceIIBUV = new Workplace(2, 'Software Engineer', 'Instituto de Investigaciones Biológicas de la UV', 'IIBUV', 'February 2019', 'August 2020', 'https://www.uv.mx/iib/');
-        const workplaceISP2 = new Workplace(3, 'Software Engineer Intern', 'Instituto de Salud Pública de la UV', 'ISP', 'February 2019', 'September 2019', 'https://www.uv.mx/isp/');
-        const workplaceLania = new Workplace(4, 'Software Engineer Intern', 'Laboratorio Nacional de Informática Avanzada', 'LANIA', 'September 2018', 'December 2018', 'http://www.lania.mx/sitios/cel/');
+        const workplaceISP = new Workplace(1, 'Software Engineer',
+        'Observatorio de Educación Médica y Derechos Humanos', 'OBEME', 'November 2019', 'July 2020', 'https://www.uv.mx/isp/');
+        const workplaceIIBUV = new Workplace(2, 'Software Engineer', 'Instituto de Investigaciones Biológicas de la UV',
+        'IIBUV', 'February 2019', 'August 2020', 'https://www.uv.mx/iib/');
+        const workplaceISP2 = new Workplace(3, 'Software Engineer Intern', 'Instituto de Salud Pública de la UV', 'ISP',
+        'February 2019', 'September 2019', 'https://www.uv.mx/isp/');
+        const workplaceLania = new Workplace(4, 'Software Engineer Intern', 'Laboratorio Nacional de Informática Avanzada',
+        'LANIA', 'September 2018', 'December 2018', 'http://www.lania.mx/sitios/cel/');
 
         this.workplaces.push(workplaceISP, workplaceIIBUV, workplaceISP2, workplaceLania);
 
-        workplaceISP.addAchievement('Implemented requirements engineering activities to develop an application intended to serve as '
-        + 'a tool to collect data from medical centers by health sciences students, said data would allow competent authorities to analyze working conditions');
+        workplaceISP.addAchievement('Implemented requirements engineering activities to develop an application intended '
+        + 'to serve as a tool to collect data from medical centers by health sciences students, said data would allow competent '
+        + 'authorities to analyze working conditions');
 
         workplaceISP.addAchievement('Designed and constructed the application. Construction was split in three modules: backend,'
         + ' using SpringBoot, Kotlin and PostgreSQL; web frontend, implemented with the VueJS framework; and the Android app.');

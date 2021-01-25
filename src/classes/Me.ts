@@ -22,22 +22,22 @@ export class Me {
         this.telegram = telegram;
         this.instagram = instagram;
     }
-    getEmail() {
+    public getEmail() {
         return this.email;
     }
-    getGithubLink() {
+    public getGithubLink() {
         return this.github;
     }
-    getTwitterLink() {
+    public getTwitterLink() {
         return this.twitter;
     }
-    getLinkedinLink() {
+    public getLinkedinLink() {
         return this.linkedin;
     }
-    getTelegramLink() {
+    public getTelegramLink() {
         return this.telegram;
     }
-    getInstagramLink() {
+    public getInstagramLink() {
         return this.instagram;
     }
 }

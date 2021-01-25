@@ -23,14 +23,14 @@ export default class Experience extends Vue {
     private title = 'Experience';
 
     public scrollToTop() {
-        var rootElement = this.$refs.compExperience as HTMLDivElement;
-        var offsets = rootElement.getBoundingClientRect();
-        var top = offsets.top;
+        const rootElement = this.$refs.compExperience as HTMLDivElement;
+        const offsets = rootElement.getBoundingClientRect();
+        const top = offsets.top;
         window.scrollBy({
-            top: top,
+            top,
             behavior: 'smooth'});
 
-        window.location.assign("#experience");
+        window.location.assign('#experience');
     }
 }
 </script>

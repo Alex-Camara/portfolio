@@ -7,7 +7,7 @@
 <script lang="ts">
 import { Component, Vue, Prop } from 'vue-property-decorator';
 import Hello from '@/components/Hello.vue';
-import { Me } from "@/classes/Me";
+import { Me } from '@/classes/Me';
 @Component({
   components: {
     Hello,
@@ -16,18 +16,17 @@ import { Me } from "@/classes/Me";
 export default class Home extends Vue {
   @Prop()
   public me!: Me;
-  
   private element: HTMLElement;
 
-  private mounted() {
-    var self = this;
-    this.element = document.getElementById("home");
-    this.element.addEventListener('wheel', self.scrollToNextSection);
+  public scrollToNextSection() {
+    this.element.removeEventListener('wheel', this.scrollToNextSection);
+    this.$emit('next', 'aboutMe');
   }
 
-  public scrollToNextSection() {
-    this.element.removeEventListener('wheel', this.scrollToNextSection)
-    this.$emit('next', 'aboutMe');
+  private mounted() {
+    const self = this;
+    this.element = document.getElementById('home');
+    this.element.addEventListener('wheel', self.scrollToNextSection);
   }
 }
 </script>
