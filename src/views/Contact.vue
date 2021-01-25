@@ -44,8 +44,7 @@ export default class Contact extends Vue {
     private title = 'Contact info';
     private subtitle = 'Get In Touch! ;)';
     private buttonText = 'Say Hi!';
-    private message = 'I\'m currently open to new job opportunities, so if you\'re interested '
-                    +   'I\'d love to hear back from you. If you want to make a request, suggest '
+    private message = 'If you want to make a request, suggest '
                     +   'an improvement, report an error or you simply want to say hi, my inbox is always open!';
 
     public scrollToTop() {

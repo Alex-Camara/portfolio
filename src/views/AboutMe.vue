@@ -1,7 +1,7 @@
 <template>
-    <div ref="compAboutMe" class="flex flex-col h-full">
+    <div ref="compAboutMe" id="about-me-container" class="flex flex-col h-full">
 
-        <div id="about-me-container" class="flex flex-col p-4 lg:flex-row  mx-5 mt-5 lg:mx-24 lg:mt-20 my-auto">
+        <div class="flex flex-col p-4 lg:flex-row  mx-5 mt-5 lg:mx-24 lg:mt-20 my-auto">
 
                 <div class="flex flex-col lg:w-9/12 lg:pr-10">
                     <section-title :title="title" data-aos="fade-right" data-aos-duration="3000" data-aos-once="true"/>
@@ -70,31 +70,31 @@ export default class AboutMe extends Vue {
     private paragraph4 = 'My hobbies include gardening, cooking, learning new things and playing with my cat. Lately I enjoy working on side projects '
                         + 'that help me acquire new skills as well as to learn how thing work. I am especially hooked with the use of Ruby on Rails as '
                         + 'an API REST backend service and Vue js to consume the API.';
-    private interests = ["Vue", "Nodejs", "JavaScript", "Java", "Ruby", "Spring boot", "Android Studio", "CSS", "Tailwindcss"];
-    private bucketList = ["Flutter", "Elixir", "Ruby on Rails"];
+    private interests = ["Vue", "Nodejs", "JavaScript", "Java", "Ruby", "Spring boot", "Android Studio", "CSS", "Tailwindcss", "React", "Laravel"];
+    private bucketList = ["Flutter", "Ruby on Rails", "Serverless web apps", "UX"];
 
     private rootElement: HTMLElement;
 
     private mounted() {
         this.rootElement = this.$refs.compAboutMe as HTMLDivElement;
-        this.rootElement.addEventListener('wheel', this.scrollToNextSection);
+        // this.rootElement.addEventListener('wheel', this.scrollToNextSection);
     }
 
-    public scrollToNextSection() {
-        var scrollTop = document.getElementById("about-me-container").scrollTop;
-        var innerHeight = window.innerHeight;
-        var scrollHeight = this.rootElement.scrollHeight;
-
-        if ((scrollTop + innerHeight) >= scrollHeight) {
-            debugger
-        } else {
-            console.info(scrollTop)
-            console.info(innerHeight)
-            console.info(scrollHeight)
-        }
+    // public scrollToNextSection() {
+        // var scrollTop = document.getElementById("about-me-container").scrollTop;
+        // var innerHeight = window.innerHeight;
+        // var scrollHeight = this.rootElement.scrollHeight;
+// 
+        // if ((scrollTop + innerHeight) >= scrollHeight) {
+            // debugger
+        // } else {
+            // console.info(scrollTop)
+            // console.info(innerHeight)
+            // console.info(scrollHeight)
+        // }
         // this.rootElement.removeEventListener('wheel', this.scrollToNextSection)
         // this.$emit('next', 'experience');
-    }
+    // }
 
     public scrollToTop() {
         var offsets = this.rootElement.getBoundingClientRect();

@@ -4,8 +4,8 @@
     <contact-panel :me="me" class="hidden lg:flex top-0 left-0 h-screen w-24 lg:fixed z-30"/>
     <right-panel :me="me"/>
     <home :me="me" class="mx-5 md:mx-24" @next="scrollToSection($event)"/>
-    <about-me ref="compAboutMe" class="md:mx-24"/>
-    <experience ref="compExperience" class="md:mx-24 mt-10"/>
+    <about-me id="aboutMe" ref="compAboutMe" class="md:mx-24"/>
+    <experience id="experience" ref="compExperience" class="md:mx-24 mt-10"/>
     <my-projects ref="compProjects" class="md:mx-20"/>
     <contact ref="compContact" :me="me" class="md:mx-24 mt-10 mb-10 lg:mb-0"/>
     <footer-info class="md:mx-24"/>
@@ -41,6 +41,8 @@ import { VueClass } from '@vue/test-utils';
 })
 export default class App extends Vue {
   private me!: Me;
+  private lastScrollTopPosition = 0;
+
   private created() {
     document.title = 'Alex Cámara';
 
@@ -54,6 +56,45 @@ export default class App extends Vue {
     window.addEventListener('hashchange', function() {
       self.scrollToSection(window.location.hash.substring(1));
     })
+
+    var container = document.getElementById("app");
+    container.addEventListener('wheel', this.scrollToNextSection);
+  }
+
+  public scrollToNextSection() {
+    // var rootElement = this.$refs.compAboutMe as HTMLDivElement;
+    var container = document.getElementById("app");
+    var aboutMeElement = document.getElementById("aboutMe");
+    var experienceElement = document.getElementById("experience");
+    var scrollTop = aboutMeElement.scrollTop;
+    var innerHeight = aboutMeElement.clientHeight;
+    var scrollHeight = aboutMeElement.scrollHeight;
+
+    var eScrollTop = experienceElement.scrollTop;
+    var eInnerHeight = experienceElement.clientHeight;
+    var eScrollHeight = experienceElement.scrollHeight;
+
+    if (scrollHeight - scrollTop - innerHeight < 1) {
+      // this.scrollToSection('experience');
+        console.info("PASO ab")
+        console.info(scrollTop)
+        console.info(innerHeight)
+        console.info(scrollHeight)
+        // console.info("PASO e")
+        // console.info(eScrollTop)
+        // console.info(eInnerHeight)
+        // console.info(eScrollHeight)
+    } else {
+      console.info("NO PASO a")
+        console.info(scrollTop)
+        console.info(innerHeight)
+        console.info(scrollHeight)
+
+      // console.info("NO PASO e")
+        // console.info(eScrollTop)
+        // console.info(eInnerHeight)
+        // console.info(eScrollHeight)
+    }
   }
 
   public scrollToSection(section: string) {
