@@ -18,15 +18,15 @@ export default class Home extends Vue {
   public me!: Me;
   private element: HTMLElement;
 
-  public scrollToNextSection() {
-    this.element.removeEventListener('wheel', this.scrollToNextSection);
-    this.$emit('next', 'aboutMe');
-  }
+  // public scrollToNextSection() {
+  //   this.element.removeEventListener('wheel', this.scrollToNextSection);
+  //   this.$emit('next', 'aboutMe');
+  // }
 
   private mounted() {
     const self = this;
     this.element = document.getElementById('home');
-    this.element.addEventListener('wheel', self.scrollToNextSection);
+    //this.element.addEventListener('wheel', self.scrollToNextSection);
   }
 }
 </script>

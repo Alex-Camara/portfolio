@@ -7,8 +7,8 @@
     />
     <right-panel :me="me" />
     <home :me="me" class="mx-5 md:mx-24" @next="scrollToSection($event)" />
-    <about-me id="aboutMe" ref="compAboutMe" class="md:mx-24" />
-    <experience id="experience" ref="compExperience" class="md:mx-24 mt-10" />
+    <about-me ref="compAboutMe" class="md:mx-24" />
+    <experience ref="compExperience" class="md:mx-24 mt-10" />
     <my-projects ref="compProjects" class="md:mx-20" />
     <contact ref="compContact" :me="me" class="md:mx-24 mt-10 mb-10 lg:mb-0" />
     <footer-info class="md:mx-24" />
@@ -46,18 +46,18 @@ export default class App extends Vue {
   private me!: Me;
   private lastScrollTopPosition = 0;
 
-  public scrollToNextSection() {
-    const container = document.getElementById('app');
-    const aboutMeElement = document.getElementById('aboutMe');
-    const experienceElement = document.getElementById('experience');
-    const scrollTop = aboutMeElement.scrollTop;
-    const innerHeight = aboutMeElement.clientHeight;
-    const scrollHeight = aboutMeElement.scrollHeight;
+  // public scrollToNextSection() {
+  //   const container = document.getElementById('app');
+  //   const aboutMeElement = document.getElementById('aboutMe');
+  //   const experienceElement = document.getElementById('experience');
+  //   const scrollTop = aboutMeElement.scrollTop;
+  //   const innerHeight = aboutMeElement.clientHeight;
+  //   const scrollHeight = aboutMeElement.scrollHeight;
 
-    const eScrollTop = experienceElement.scrollTop;
-    const eInnerHeight = experienceElement.clientHeight;
-    const eScrollHeight = experienceElement.scrollHeight;
-  }
+  //   const eScrollTop = experienceElement.scrollTop;
+  //   const eInnerHeight = experienceElement.clientHeight;
+  //   const eScrollHeight = experienceElement.scrollHeight;
+  // }
 
   public scrollToSection(section: string) {
     switch (section) {
@@ -94,12 +94,17 @@ export default class App extends Vue {
 
   private mounted() {
     const self = this;
+
     window.addEventListener('hashchange', () => {
       self.scrollToSection(window.location.hash.substring(1));
     });
 
-    const container = document.getElementById('app');
-    container.addEventListener('wheel', this.scrollToNextSection);
+    if (window.location.hash.substring(1)) {
+      self.scrollToSection(window.location.hash.substring(1));
+    }
+
+    // const container = document.getElementById('app');
+    // container.addEventListener('wheel', this.scrollToNextSection);
   }
 }
 </script>
