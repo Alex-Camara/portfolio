@@ -15,8 +15,8 @@
       </a>
     </div>
     <div class="flex items-center justify-center h-5">
-      <p class="text-sm text-dark-gray">Based in the design made by &shy;</p>
-      <a href="https://www.uv.mx/" target="_blank" class="link-text text-sm text-dark-gray">
+      <p class="text-sm text-dark-gray mr-1">Based in the design made by</p>
+      <a href="https://github.com/bchiang7" target="_blank" class="link-text text-sm text-dark-gray">
         Brittany Chiang.
       </a>
     </div>
