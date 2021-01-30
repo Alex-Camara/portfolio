@@ -23,7 +23,7 @@
             complex problems.
           </p>
           <div class="flex flex-wrap mb-4">
-            <p>Universidad Veracruzana &shy;</p>
+            <p class="mr-1">I completed my bachelor of Software Engineering at</p>
             <a href="https://www.uv.mx/" target="_blank" class="link-text">
               Universidad Veracruzana
             </a>
