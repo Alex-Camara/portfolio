@@ -27,7 +27,7 @@
             <a href="https://www.uv.mx/" target="_blank" class="link-text">
               Universidad Veracruzana
             </a>
-            <p>, during the 2020 summer.</p>
+            <p> during the 2020 summer.</p>
           </div>
           <p>
             My hobbies include gardening, cooking, learning new things and
