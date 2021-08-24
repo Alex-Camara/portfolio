@@ -42,12 +42,19 @@ export default class TabTable extends Vue {
     }
 
     private created() {
+        const workplaceIDisc = new Workplace(1, 'Software Engineer',
+        'iDisc Information Technologies', 'iDisc', 'November 2020', 'Present', 'https://www.idisc.com');
+
+
         const workplaceISP = new Workplace(1, 'Software Engineer',
         'Observatorio de Educación Médica y Derechos Humanos', 'OBEME', 'November 2019', 'July 2020', 'https://www.uv.mx/isp/');
+
         const workplaceIIBUV = new Workplace(2, 'Software Engineer', 'Instituto de Investigaciones Biológicas de la UV',
         'IIBUV', 'February 2019', 'August 2020', 'https://www.uv.mx/iib/');
+
         const workplaceISP2 = new Workplace(3, 'Software Engineer Intern', 'Instituto de Salud Pública de la UV', 'ISP',
         'February 2019', 'September 2019', 'https://www.uv.mx/isp/');
+
         const workplaceLania = new Workplace(4, 'Software Engineer Intern', 'Laboratorio Nacional de Informática Avanzada',
         'LANIA', 'September 2018', 'December 2018', 'http://www.lania.mx/sitios/cel/');
 
