@@ -29,6 +29,7 @@ import FooterInfo from '@/views/FooterInfo.vue';
 import { Me } from '@/classes/Me';
 import { VueClass } from '@vue/test-utils';
 
+
 @Component({
   components: {
     Navbar,
