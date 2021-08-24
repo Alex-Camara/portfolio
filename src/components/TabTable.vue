@@ -10,11 +10,11 @@
 
         <div id="tab-information" class="mt-20 lg:mt-0 text-dark-white lg:pl-10">
             <div class="flex text-base font-bold flex-wrap">
-                <p class="">{{ selectedWorkplace.job }} at &shy;</p>
+                <p class="">{{ selectedWorkplace.job }} at <span class="ml-1"></span></p>
                 <a class="link-text" :href="selectedWorkplace.link" target="_blank">{{ selectedWorkplace.name }}</a>
             </div>
             <div class="flex text-base flex-wrap">
-                <p>{{ selectedWorkplace.startDate }} - &shy;</p>
+                <p>{{ selectedWorkplace.startDate }} - <span class="ml-1"></span></p>
                 <p>{{ selectedWorkplace.endDate }}</p>
             </div>
 
@@ -42,9 +42,11 @@ export default class TabTable extends Vue {
     }
 
     private created() {
+        const workplaceKoalaWorkshop = new Workplace(1, 'Software Engineer',
+        'Koala Workshop', 'Koala', 'March 2021', 'Present', 'https://koalaworkshop.com/');
+
         const workplaceIDisc = new Workplace(1, 'Software Engineer',
         'iDisc Information Technologies', 'iDisc', 'November 2020', 'Present', 'https://www.idisc.com');
-
 
         const workplaceISP = new Workplace(1, 'Software Engineer',
         'Observatorio de Educación Médica y Derechos Humanos', 'OBEME', 'November 2019', 'July 2020', 'https://www.uv.mx/isp/');
@@ -58,7 +60,24 @@ export default class TabTable extends Vue {
         const workplaceLania = new Workplace(4, 'Software Engineer Intern', 'Laboratorio Nacional de Informática Avanzada',
         'LANIA', 'September 2018', 'December 2018', 'http://www.lania.mx/sitios/cel/');
 
-        this.workplaces.push(workplaceISP, workplaceIIBUV, workplaceISP2, workplaceLania);
+        this.workplaces.push(workplaceKoalaWorkshop, workplaceIDisc, workplaceISP, workplaceIIBUV, workplaceISP2, workplaceLania);
+
+         workplaceKoalaWorkshop.addAchievement('Implemented the frontend side for a student’s learning site new section called ‘learning lab’, aimed to strengthen the user’s grasp in ' +
+        'previous concepts learned at the main site. (Laravel and Vue)'
+    );
+
+        workplaceKoalaWorkshop.addAchievement('Analized existing web platform in order to accomodate new requirements. (Laravel and Vue)');
+
+        workplaceKoalaWorkshop.addAchievement('Reimplemented the platform’s frontend side in order to support API calls instead of laravel web routes. (Laravel and Vue)');
+
+        workplaceIDisc.addAchievement('Interpreted and translated internal user requirements in order to propose an automated tool '
+        + 'to assist in the daily tasks performed by the company’s linguists.');
+
+        workplaceIDisc.addAchievement('Automated the company’s internal task translation process by the creation of a website ' +
+        + 'platform that could perform the task identified in previous stages. (Laravel and React)');
+
+        workplaceIDisc.addAchievement('Migrated and evolved a client’s CRM in order to accomodate to new requirements. Developed ' +
+        + 'the product in several iterations in order to involve customer’s feedback and maximize the new product’s acceptation by the client. (Laravel)');
 
         workplaceISP.addAchievement('Implemented requirements engineering activities to develop an application intended '
         + 'to serve as a tool to collect data from medical centers by health sciences students, said data would allow competent '
