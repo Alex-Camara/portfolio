@@ -37,7 +37,7 @@
             </div> 
         </div>
         <div class="hidden md:flex md:visible items-center" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="900">
-            <a href="./cv-alex-camara-software-engineer.pdf" class="regular-button mr-10" target="_blank">
+            <a href="./cv_alejandro_camara_software_engineer.pdf" class="regular-button mr-10" target="_blank">
                 {{ resumeButtonText }}
             </a>
         </div>
