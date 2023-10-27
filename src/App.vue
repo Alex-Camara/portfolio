@@ -47,19 +47,6 @@ export default class App extends Vue {
   private me!: Me;
   private lastScrollTopPosition = 0;
 
-  // public scrollToNextSection() {
-  //   const container = document.getElementById('app');
-  //   const aboutMeElement = document.getElementById('aboutMe');
-  //   const experienceElement = document.getElementById('experience');
-  //   const scrollTop = aboutMeElement.scrollTop;
-  //   const innerHeight = aboutMeElement.clientHeight;
-  //   const scrollHeight = aboutMeElement.scrollHeight;
-
-  //   const eScrollTop = experienceElement.scrollTop;
-  //   const eInnerHeight = experienceElement.clientHeight;
-  //   const eScrollHeight = experienceElement.scrollHeight;
-  // }
-
   public scrollToSection(section: string) {
     switch (section) {
       case 'aboutMe':
